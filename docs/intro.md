@@ -5,7 +5,7 @@ slug: /
 
 # API Documentation
 
-Coinable provides merchants and stores with Checkout API that can be used to build excellent Web3 checkout experience & easy to implement, handy checkout systems for storefronts.
+Coinable provides merchants and stores with our own custom built API that can be used to build excellent Web3 payment experience, easy to fllow and implement. You can help use improve this documentation by contributing to [our documentation repository](https://github.com/coinable/coinable-docs)
 
 ## Getting Started
 
