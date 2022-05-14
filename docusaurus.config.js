@@ -60,7 +60,9 @@ const config = {
         title: 'Coinable',
         logo: {
           alt: 'Coinable Logo',
-          src: 'img/logo.png',
+          src: 'img/logo.svg',
+          height: 24,
+          width: 24,
         },
         items: [
           {
