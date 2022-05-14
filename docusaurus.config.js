@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Coinable API Documentation',
+  title: 'Coinable Documentation',
   tagline: 'Your token based payment gateway powered by Solana',
   url: 'https://docs.coinable.dev/',
   baseUrl: '/',
@@ -37,8 +37,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/coinable/coinable-docs/tree/dev/',
         },
         blog: false,
       }),
@@ -60,7 +59,7 @@ const config = {
           src: 'img/logo.svg',
           height: 24,
           width: 24,
-          href: '/docs/intro',
+          href: '/',
         },
         items: [
           {
