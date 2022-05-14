@@ -3,9 +3,9 @@ sidebar_position: 1
 slug: /
 ---
 
-# Tutorial Intro
+# API Documentation
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Coinable provides merchants and stores with Checkout API that can be used to build excellent Web3 checkout experience & easy to implement, handy checkout systems for storefronts.
 
 ## Getting Started
 

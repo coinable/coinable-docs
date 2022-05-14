@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Coinable',
+  title: 'Coinable API Documentation',
   tagline: 'Your token based payment gateway powered by Solana',
   url: 'https://docs.coinable.dev/',
   baseUrl: '/',
@@ -48,6 +48,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
       navbar: {
         title: 'Coinable',
         logo: {
