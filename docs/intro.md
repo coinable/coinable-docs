@@ -3,46 +3,16 @@ sidebar_position: 1
 slug: /
 ---
 
-# API Documentation
+# Introduction
 
-Coinable provides merchants and stores with our own custom built API that can be used to build excellent Web3 payment experience, easy to fllow and implement. You can help use improve this documentation by contributing to [our documentation repository](https://github.com/coinable/coinable-docs)
+Coinable is a payment gateway provider for merchants and stores with custom built API that can be used to build excellent Web3 payment experience,
+easy to follow and implement. You can help us improve our documentation by contributing to [our documentation repository](https://github.com/coinable/coinable-docs).
 
-## Getting Started
+This documentation is provided for any and every store interested in accepting Solana crypto assets in a very convinient way both for the Buyer and the Store.
 
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+> **NOTE**
+>
+> We itterate over and over by the minute each day 24/7/365. Because we are sprinting with new
+> features on weekly basis, stuff may break but we are fixing them as soon as we find any. Everything is for our community,
+> we listen closely to your suggestions and requests. Join our [Discord community](https://discord.gg/Q8XtTCCqBj) to stay connected, feel free to ask questions and
+> share your thoughts (we also have a bug bounty system that grants a discount for the upcoming NFT mint).
