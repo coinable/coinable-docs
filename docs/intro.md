@@ -5,14 +5,18 @@ slug: /
 
 # Introduction
 
-Coinable is a payment gateway provider for merchants and stores with custom built API that can be used to build excellent Web3 payment experience,
-easy to follow and implement. You can help us improve our documentation by contributing to [our documentation repository](https://github.com/coinable/coinable-docs).
+Coinable is a payment gateway for merchants and stores providing easy to access crypto payment features using the [Solana blockchain](https://solana.com/), we also provide an Application Programming Interface (API) that can be used to build excellent Web3 payment experience,
+which is easy to follow and implement into your already running storefront.
 
-This documentation is provided for any and every store interested in accepting Solana crypto assets in a very convinient way both for the Buyer and the Store.
+This documentation is provided for any and every business interested in accepting Solana crypto assets such as USDC, Sol, and any other [crypto token asset](https://coinmarketcap.com/view/solana-ecosystem/) avaialble on the Solana blockchain in a very convinient way both for the Buyer and the Store.
+
+You can help us improve our documentation by contributing to [our documentation repository](https://github.com/coinable/coinable-docs).
 
 > **NOTE**
 >
-> We itterate over and over by the minute each day 24/7/365. Because we are sprinting with new
-> features on weekly basis, stuff may break but we are fixing them as soon as we find any. Everything is for our community,
-> we listen closely to your suggestions and requests. Join our [Discord community](https://discord.gg/Q8XtTCCqBj) to stay connected, feel free to ask questions and
-> share your thoughts (we also have a bug bounty system that grants a discount for the upcoming NFT mint).
+> We itterate over and over by the minute each day 24/7/365.
+>
+> Because we are sprinting with new
+> features on weekly basis, stuff may break and contain bugs but we are fixing everything the second we get a report for any issue. We love to listen to our community,
+> you can send over your suggestions and requests by joining our active [Discord community](https://discord.gg/Q8XtTCCqBj), feel free to ask questions and
+> share your thoughts (we also have a bug bounty system that grants a discount for the upcoming Founders NFT mint).
