@@ -8,7 +8,7 @@ slug: /
 Coinable is a payment gateway for merchants and stores providing easy to access crypto payment features using the [Solana blockchain](https://solana.com/), we also provide an Application Programming Interface (API) that can be used to build excellent Web3 payment experience,
 which is easy to follow and implement into your already running storefront.
 
-This documentation is provided for any and every business interested in accepting Solana crypto assets such as USDC, Sol, and any other [crypto token asset](https://coinmarketcap.com/view/solana-ecosystem/) avaialble on the Solana blockchain in a very convinient way both for the Buyer and the Store.
+This documentation is provided for any and every business interested in accepting Solana crypto assets such as USDC, Sol, and any other crypto asset in the [Solana eco-system](https://coinmarketcap.com/view/solana-ecosystem/), very conviniently both for the Buyer and the Business.
 
 You can help us improve our documentation by contributing to [our documentation repository](https://github.com/coinable/coinable-docs).
 
