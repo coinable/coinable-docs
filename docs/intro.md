@@ -9,7 +9,7 @@ Coinable is a next generation payment gateway and processing platform powered by
 
 This documentation is provided for anyone interested in accepting native SOL and tokens such as USDC, wSOL, and any other tokens in the [Solana eco-system](https://coinmarketcap.com/view/solana-ecosystem/).
 
-You can help us improve our documentation by contributing to [our documentation repository](https://github.com/coinable/coinable-docs).
+You can help us improve our documentation by contributing to our [documentation](https://github.com/coinable/coinable-docs).
 
 > **NOTE**
 >
