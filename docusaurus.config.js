@@ -95,7 +95,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Coinable, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Coinable, Inc.`,
       },
       prism: {
         theme: lightCodeTheme,
