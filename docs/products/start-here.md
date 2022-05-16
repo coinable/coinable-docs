@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 0
 ---
 
 # Start Here
@@ -22,13 +22,21 @@ One can set the **wallet address** by going to the **Settings** tab and inputtin
 
 <div style={{textAlign: 'center', padding: '20px'}}>
 
-![Settings Wallet Address](/img/general/settings-wallet-address.png)
+![Settings Wallet Address](/img/products/settings-wallet-address.png)
 
 </div>
 
 ## Whitelist tokens
 
 You will need to set the tokens that you will accept for each project. This can be accomplished by whitelisting tokens, and will restrict the type of token that a potential customers can send to you allowing for increased control.
+
+If a token account for the whitelisted token does not exist, Coinable will create an instruction to open a token account on your behalf when you whitelist the token. This token account will need to remain open in order for you to receive the whitelisted token. A token account is comparable to having a checking account for different currencies accepted in your non-crypto business, e.g. USD, EUR, JPY.
+
+:::tip
+
+If you find that a token account is missing for a whitelisted token, removing and re-adding will create a new token account.
+
+:::
 
 Once the tokens to accept have been set, customers will be able to pay in any tokens that have been whitelisted for a given project. For example, if only USDC is whitelisted, customers will only be able to pay in USDC.
 
