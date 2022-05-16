@@ -12,7 +12,7 @@ In order to start accepting crypto payments, each project will need to specify:
 2. Tokens to accept as payment, e.g. SOL, USDC.
 
 
-## Set a wallet address
+## Set wallet address
 
 Each project will need to set a wallet address. The wallet address will be used to derive token accounts, where customers will directly transfer tokens accepted for payment.
 
