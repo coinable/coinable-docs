@@ -1,7 +1,8 @@
 # Official Coinable Docs
-<a href="https://discord.gg/ykwpVayb"><img alt="Discord Chat" src="https://img.shields.io/discord/952008855078973460?color=blueviolet" /></a>
 
+[![Discord](https://img.shields.io/discord/952008855078973460?color=7289DA&style=plastic)](https://discord.gg/ykwpVayb)    [![Twitter](https://img.shields.io/twitter/follow/coinablepay?color=%231DA1F2&style=plastic)](https://twitter.com/coinablepay)
 
+</div>
 ### Installation
 
 ```
