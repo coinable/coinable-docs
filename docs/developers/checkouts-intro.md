@@ -20,7 +20,7 @@ After you have done setting up our wallet, you need to follow our [Start here](h
 and whitelist yourself the tokens you want to accept. We recommend going with **Wrapped SOL** and **USDC** as your first tokens,
 you can add more tokens later after you've done your own research.
 
-## API Usage
+## Initial Setup
 
 Before we cant start using the API we will need to sort out 2 things.
 
@@ -29,7 +29,7 @@ Before we cant start using the API we will need to sort out 2 things.
 
 ### Private Access Key (API Key)
 
-API access key is used to access the checkout session creation API.
+First thing first, API access key is used to access the checkout session creation API.
 Your API is located in the [API Access](https://coinable.dev/dashboard/api) tab in your Dashboard.
 
 You will be greeted with 2 fields once you are in the API Access tab
@@ -37,12 +37,54 @@ You will be greeted with 2 fields once you are in the API Access tab
 - API Key
 - Webhook Endpoint (We will talk about this in a bit)
 
-Click on the button `Click to see API key` and your key should appear. This is the key that you will use to access Checkouts API. Please keep it somewhere
+### Get your api key
+
+Click on the button `Click to see API key` in the [API Access](https://coinable.dev/dashboard/api) tab in your dashboard, your key should appear. This is the key that you will use to access Checkouts API. Please keep it somewhere
 safe and never share it with anyone else. This one of the things you usually keep as an enviornment variable and never add to your git commit history.
 
 Copy over your api key to somewhere safe, will use this access key shortly.
 
-### Webhook setup
+## Create your first checkout session
+
+Now we will continue to the creation of our first ever checkout session, We are one step closer with providing our customers with token payment gateway 🎉.
+
+### How to create a checkout session
+
+To create your first checkout session you will create a `POST` request to the following endpoint, replace the `<YOUR_API_KEY>` with your own api
+key you copied earlier. If you haven't copied your key yet, you should be able to do that by following [this guide](/developers/checkouts-intro#get-your-api-key).
+
+```
+https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
+```
+
+Checkout session creation endpoint accepts the following data to be sent along side with it.
+Now, we will explain each field and its responsibility.
+After that we will show a payload example that can be sent along side the request.
+
+### Checkout session parameters
+
+`cancel_url` - Url page which the user will be redirected to if he decides to cancel the checkout or go back to your store, maybe to add some more items.
+
+`success_url` - Once user has successfuly paid for the invoice, the user will be redirected to this page. This param can optionally accept a checkout session id as such `{ORDER_NUMBER}`. You will see an example later in the documentation once we will send a payload example.
+
+`items` - This is an array of objects `Item`, which define the items from your customer cart.
+
+- `Item` structure looks like as follows
+  - `price` - a price of the item the user selected in the cart.
+  - `quantity` - amount of the item that the user has selected.
+  - `display_name` - the title of the item.
+  - `description` - an optional description for the item.
+  - `image_url` - opitonal image of the item, a placeholder will be used if no url is provided.
+
+`shipping_options` - an array of objects `ShippingOption`, which define the shipping options available for the customer. Optional field, if no field not added item doesn't require shipping e.g. a game key.
+
+- `ShippingOption` structure looks like as follows
+  - `price` - the cost of shipping the items to the customer.
+  - `display_name` - the title of the shipping method for example "Free shipping"
+  - `type` - optional the type of payment, defaults to `fixed_amount`(Not editable at the moment).
+  - `currency` - optional the currency in which the payment is calculated, defaults to `USDC` (Not editable at the moment).
+
+## Webhook setup
 
 Now we need to setup our webhook which is going to listen to events and act accordingly to what it receives, a typical webhook would look like this
 
@@ -110,7 +152,3 @@ app.post(
   }
 );
 ```
-
-## Create your first checkout session
-
-Now that we have our webhook setup so we can intercept different events and act accordingly to them we can now explore the session creation API
