@@ -1,96 +1,73 @@
 ---
 sidebar_position: 0
----
+--- 
 
-# Checkouts
+# Checkout
 
-Checkouts are the essential part of every business that wants to generate revenue and accepting payments.
-Coinable provides a Web3 checkout integration which helps buisnesses accept token based payments by integrating via our API. With Coinables
-Checkout API every business can expand their revenue making channels by starting accepting Solana eco-system tokens, such as USDC (Stable coin that is pegged to $1 at all times) and SOL.
+The Checkout API allows any business to increase revenue generating channels and remain competitive in the oncoming digital commerce revolution. Accept Solana token payments online with Coinable's self-hosted Checkout page with integration only a few steps a away. Start accepting Solana eco-system tokens, including USDC, from today.
 
-Please do not skip any parts of the tutorial so no missing data or step will occur in the process.
+Make sure to follow closely the steps outlined in the following paragraphs.
 
 ## Getting Started
 
-To start accepting payments we need to setup ourselves a wallet, If you don't already have a wallet we recommend
-going with the [Phantom](https://phantom.app/) wallet, which is easy enough to setup by following the
-steps described on their website.
+In order to accept token payments a wallet address is required. If you do not have a wallet address, follow the steps outlined at [Phantom](https://phantom.app/) wallet.
 
-After you have done setting up our wallet, you need to follow our [Start here](http://localhost:3000/products/start-here) article
-and whitelist yourself the tokens you want to accept. We recommend going with **Wrapped SOL** and **USDC** as your first tokens,
-you can add more tokens later after you've done your own research.
+Once you have a wallet address available, follow the steps described in the [Start here](http://localhost:3000/products/start-here) documentation. Once completed, you will have a main wallet set for your project, and tokens whitelisted for payment. We recommend starting with **Wrapped SOL** and **USDC** as your first tokens. 
+
+:::note
+
+Whitelisting **Wrapped SOL** will allow your customers to pay in *both* native SOL, and wSOL, the tokenized version of SOL.
+
+:::
 
 ## Initial Setup
 
-Before we can start using the API we will need to sort out 2 things.
-
-1. How do we acces the Checkout API and call the endpoints it provides
-2. Setup a webhook on our server to handle different events emitted by the checkout session
-
 ### Private Access Key (API Key)
 
-First thing first, API access key is used to access the checkout session creation API.
-Your API is located in the [API Access](https://coinable.dev/dashboard/api) tab in your Dashboard.
+The API access key is required to access the Checkout session API. Your API access key is located in the [API Access](https://coinable.dev/dashboard/api) tab in your Dashboard. Each project will be assigned a unique API key and should be kept secure.
 
-You will be greeted with 2 fields once you are in the API Access tab
+## Create a Checkout session
 
-- API Key
-- Webhook Endpoint (We will talk about this in a bit)
+The following steps will guide you through in creating a Checkout session.
 
-### Get your api key
+### Checkout session endpoint
 
-Click on the button `Click to see API key` in the [API Access](https://coinable.dev/dashboard/api) tab in your dashboard, your key should appear. This is the key that you will use to access Checkouts API. Please keep it somewhere
-safe and never share it with anyone else. This one of the things you usually keep as an enviornment variable and never add to your git commit history.
-
-Copy over your api key to somewhere safe, will use this access key shortly.
-
-## Create your first checkout session
-
-Now we will continue to the creation of our first ever checkout session, We are one step closer with providing our customers with token payment gateway 🎉.
-
-### Checkout session creation endpoint
-
-To create your first checkout session you will create a `POST` request to the following endpoint, replace the `<YOUR_API_KEY>` with your own api
-key you copied earlier. If you haven't copied your key yet, you should be able to do that by following [this guide](/developers/checkouts#get-your-api-key).
+To create a checkout session you will create a `POST` request to the following endpoint. Replace `<YOUR_API_KEY>` with your own API key. An example will be provided in the following section.
 
 ```
 https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
 ```
 
-Checkout session creation endpoint accepts the following data to be sent along side with it.
-Now, we will explain each field and its responsibility.
-After that we will show a payload example that can be sent along side the request.
 
-### Checkout session creation payload parameters
+### Checkout session parameters
 
-`cancel_url` - Url page which the user will be redirected to if he decides to cancel the checkout or go back to your store, maybe to add some more items.
+`cancel_url` - The URL of the page that the customer will be directed to if they decide to cancel the checkout process.
 
-`success_url` - Once user has successfuly paid for the invoice, the user will be redirected to this page. This param can optionally accept a checkout session id as such `{ORDER_NUMBER}`. You will see an example later in the documentation once we will send a payload example.
+`success_url` - The URL of the page that the customer will be directed to on a successful checkout. Additional params can be passed such as  `{ORDER_NUMBER}`.
 
-`items` - This is an array of objects `Item`, which define the items from your customer cart.
+`items` - An array of `Item` objects where the `Item` object is defined as having the following members.
 
-- `price` - a price of the item the user selected in the cart.
-- `quantity` - amount of the item that the user has selected.
-- `display_name` - the title of the item.
-- `description` - an optional description for the item.
-- `image_url` - opitonal image of the item, a placeholder will be used if no url is provided.
+- `price` - The price of the product.
+- `quantity` - The quantity ordered.
+- `display_name` - The name of the product.
+- `description` - An optional product description.
+- `image_url` - An optional product image. A placeholder will be used if no URL is provided.
 
-`shipping_options` - an array of objects `ShippingOption`, which define the shipping options available for the customer. Optional field, if no field not added item doesn't require shipping e.g. a game key.
+`shipping_options` - optional. An array of `ShippingOption`, which defines the shipping options available to the customer. If left undefined, shipping is not needed for the respective product, e.g. a game key.
 
-- `price` - the cost of shipping the items to the customer.
-- `display_name` - the title of the shipping method for example "Free shipping"
-- `delivery_estimate` - an object `DeliveryEstimate` responsible for defining the min and max values of the shipping.
-  - `min_unit` - the minimum unit of the estimation value, defaults to `business_day` (Not editable at the moment).
-  - `max_unit` - the maximum unit of the estimation value, defaults to `business_day` (Not editable at the moment).
-  - `min_value` - the numerical representation of minimum days until shipping.
-  - `max_value` - the numerical representation of maximum days until shipping.
-- `type` - optional the type of payment, defaults to `fixed_amount`(Not editable at the moment).
-- `currency` - optional the currency in which the payment is calculated, defaults to `USDC` (Not editable at the moment).
+- `price` - The cost of shipping the product.
+- `display_name` - The name of the shipping method. e.g. "Free shipping"
+- `delivery_estimate` - An object `DeliveryEstimate` responsible for defining the min and max values of the shipping.
+  - `min_unit` - the minimum unit of time, defaults to `business_day` (Not editable at the moment).
+  - `max_unit` - the maximum unit of time, defaults to `business_day` (Not editable at the moment).
+  - `min_value` - the numerical representation of the minimum unit until shipping.
+  - `max_value` - the numerical representation of the maximum unit until shipping.
+- `type` - optional. Type of payment, defaults to `fixed_amount`(Not editable at the moment).
+- `currency` - optional. The stable coin in which the payment is based, defaults to `USDC` (Not editable at the moment).
 
-### Creating the first checkout session
+### Creating a Checkout session
 
-Lets build our first `curl` and send the request to Checkouts API, you could use Postman which may be more comfortable
-for some of you, or do a direct call through your code with your http client, its up to you really.
+Send a request to the Checkout API using the following command.
 
 ```json title="Checkout session creation"
 curl --location --request POST 'localhost:4000/v1/api/checkouts?api_key=5600324db80841548a360f44b851fcf4' \
@@ -133,8 +110,8 @@ curl --location --request POST 'localhost:4000/v1/api/checkouts?api_key=5600324d
 }'
 ```
 
-Once called successfully you should get a response with a single field `redirect_url` which is the link redirecting to the checkout session on Coinable
-This is the link you should provide to the user which tries to checkout once he clicked the "Pay with Coinable" or however you want to call it button.
+A JSON-encoded success response will have a single field `redirect_url` which will be the link directing to the Checkout session on Coinable. This URL can be linked to a checkout button.
+
 
 ```json title="200 Success"
 {
@@ -142,7 +119,7 @@ This is the link you should provide to the user which tries to checkout once he 
 }
 ```
 
-If you forget any of the fields required for session creation the response will return a `400` with description of whats missing e.g.
+If a field is missing from a request, the `400` response will contain information on the missing fields.
 
 ```json title="400 Bad request"
 {
@@ -154,7 +131,7 @@ If you forget any of the fields required for session creation the response will 
 
 ## Webhook setup
 
-Now we need to setup our webhook which is going to listen to events and act accordingly to what it receives, a typical webhook would look like this.
+Now we need to setup the applications webhook which is going to listen for notification related to Checkout events.
 
 ```javascript title="Webhook example"
 const app = require('express')();
@@ -170,28 +147,27 @@ app.post(
 
     console.log('Got payload: ' + payload);
 
-    // Handle payload data accordingly, maybe call a function
-    // to remove 1 item from the database and add the item to the user
+    // Handle payload data accordingly
 
     response.status(200);
   }
 );
 ```
 
-### Possible webhook checkout events
+### Coinable webhook Checkout events
 
-Lets get familiar with the events that are available for the Checkouts API. You can handle each event in your code however you see fit.
+Coinable can notify your application of the following events.
+
 
 | Event code                         | Description                                                                                                                                                                                                                                                                                                                                                                 |
 | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `checkout.session.completed`       | Checkout is complete, money is transferred to the merchants wallet.                                                                                                                                                                                                                                                                                                         |
-| `checkout.session.payment_attempt` | There was a **payment attempt** in the checkout session this doesn't mean that the payment was completed. **No tokens has been transferred to the merchant accounts yet.** Some developers choose to ignore this event, some use it for internal data metrics.                                                                                                              |
-| `checkout.session.failed`          | A customer has tried to pay the checkout session, Solana blockchain has accepted the transaction and some tokens may have been transferd to the merchants wallet address, but the amount of tokens paid by the customer is not the same as what the checkout has requested. Contact customer for farther investigation. Typically happens due to malicious payment attempt. |
+| `checkout.session.completed`       | Checkout is complete and tokens have been transferred to the merchants wallet.                                                                                                                                                                                                                                                                                                         |
+| `checkout.session.payment_attempt` | There was a **payment attempt** in the Checkout session which doesn't mean that the payment was completed. **No tokens has been transferred to the merchant accounts yet.** Some developers choose to ignore this event, some use it for internal data metrics.                                                                                                              |
+| `checkout.session.failed`          | Occurs when there is a mismatch between the checkout amount and transfer amount. Contact customer for further investigation. Typically happens due to malicious payment attempt. |
 
-### Improving our webhook
+### Improving the webhook example
 
-So now that we know what type of events are emitted to us, our webhook now can look like this.
-It will execute the appropriate block of code depending on what has been emitted.
+We can improve the previous example by handling the different events delivered to the applications webhook.
 
 ```javascript title="Improved webhook example"
 const fulfillOrder = (data) => {
@@ -213,7 +189,6 @@ app.post(
       fulfillOrder(data);
     } else if (payload.type === 'checkout.session.failed') {
       // addFailedPurchaseAttempt(payload.data);
-      // or whatever works for you
     }
 
     response.status(200);

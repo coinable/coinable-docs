@@ -14,7 +14,7 @@ Any native SOL payments will be converted to the tokenized version wSOL to be pr
 :::
 
 
-## How to create an invoice
+## Create an Invoice
 
 Users will be able to create invoices from the dashboard through a single click.
 
@@ -33,7 +33,7 @@ Specify the USD amount to invoice, populate the required fields, including disco
 
 </div>
 
-## What the customer sees
+## Customer View
 
 Once the customer accesses the link, they will have the option to select a whitelisted token to use for payment. The USD equivalent amount of the selected token will be transferred to your wallet instantly.
 
@@ -44,7 +44,7 @@ Once the customer accesses the link, they will have the option to select a white
 </div>
 
 
-## Check the state of the invoice
+## Dashboard
 
 The dashboard lets you track the state of the invoice from pending to fulfilled, and raise a notification if the invoice is past due.
 
