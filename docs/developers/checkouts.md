@@ -51,7 +51,7 @@ Now we will continue to the creation of our first ever checkout session, We are 
 ### Checkout session creation endpoint
 
 To create your first checkout session you will create a `POST` request to the following endpoint, replace the `<YOUR_API_KEY>` with your own api
-key you copied earlier. If you haven't copied your key yet, you should be able to do that by following [this guide](/developers/checkouts-intro#get-your-api-key).
+key you copied earlier. If you haven't copied your key yet, you should be able to do that by following [this guide](/developers/checkouts#get-your-api-key).
 
 ```
 https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
