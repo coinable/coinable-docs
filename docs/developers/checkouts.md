@@ -154,7 +154,7 @@ If you forget any of the fields required for session creation the response will 
 
 ## Webhook setup
 
-Now we need to setup our webhook which is going to listen to events and act accordingly to what it receives, a typical webhook would look like this
+Now we need to setup our webhook which is going to listen to events and act accordingly to what it receives, a typical webhook would look like this.
 
 ```javascript title="Webhook example"
 const app = require('express')();
