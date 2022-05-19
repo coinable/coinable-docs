@@ -2,7 +2,6 @@
 
 [![Discord](https://img.shields.io/discord/952008855078973460?color=7289DA)](https://discord.gg/ykwpVayb) [![Twitter](https://img.shields.io/twitter/follow/coinablepay?color=%231DA1F2)](https://twitter.com/coinablepay) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
----
 
 This is the official documentation for Coinable, a token payment platform built on Solana and powered by a first class community.
 
