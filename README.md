@@ -1,41 +1,26 @@
-# Website
+# Official Coinable Docs
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+[![Discord](https://img.shields.io/discord/952008855078973460?color=7289DA)](https://discord.gg/ykwpVayb) [![Twitter](https://img.shields.io/twitter/follow/coinablepay?color=%231DA1F2)](https://twitter.com/coinablepay) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-### Installation
 
-```
-$ yarn
-```
+This is the official documentation for Coinable, a token payment platform built on Solana and powered by a first class community.
 
-### Local Development
+The documentation contains information on `products` offered by Coinable and step-by-step tutorials for the common user.
 
-```
-$ yarn start
-```
+The `developers` sections provides resources for developers looking to integrate a payment layer using Coinable's API and build next-gen Web3 applications.
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+We welcome your comments and pull requests to improve the documentation.
 
-### Build
 
-```
-$ yarn build
-```
+## Contributing
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+We are thankful for any contributions from the community.
 
-### Deployment
+Please leave an issue first before starting to make a contribution to avoid duplication.
 
-Using SSH:
+## Contact
 
-```
-$ USE_SSH=true yarn deploy
-```
+Looking to get in touch?
 
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+- [Discord](https://discord.gg/coinable)
+- [@coinablepay](https://twitter.com/coinablepay) on Twitter
