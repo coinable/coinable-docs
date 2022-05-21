@@ -70,7 +70,7 @@ https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
 Send a request to the Checkout API using the following command.
 
 ```json title="Checkout session creation"
-curl --location --request POST 'localhost:4000/v1/api/checkouts?api_key=5600324db80841548a360f44b851fcf4' \
+curl --location --request POST 'https://api.coinable.dev/v1/api/checkouts?api_key=5600324db80841548a360f44b851fcf4' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "cancel_url": "https://<mywebsite.com>/cancel_order.html",
