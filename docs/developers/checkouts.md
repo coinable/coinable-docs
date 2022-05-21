@@ -28,11 +28,11 @@ The API access key is required to access the Checkout session API. Your API acce
 
 ## Create a Checkout session
 
-The following steps will guide you through in creating a Checkout session.
+The following steps will guide you through in creating a Checkout session on devnet.
 
 ### Checkout session endpoint
 
-To create a checkout session you will create a `POST` request to the following endpoint. Replace `<YOUR_API_KEY>` with your own API key. An example will be provided in the following section.
+To create a checkout session you will create a `POST` request to the following endpoint. Replace `<YOUR_API_KEY>` with your own API key. An example running on devnet will be provided in the following section.
 
 ```
 https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
@@ -67,10 +67,10 @@ https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
 
 ### Creating a Checkout session
 
-Send a request to the Checkout API using the following command.
+Send a request to the Checkout API on devnet using the following command.
 
 ```json title="Checkout session creation"
-curl --location --request POST 'localhost:4000/v1/api/checkouts?api_key=5600324db80841548a360f44b851fcf4' \
+curl --location --request POST 'https://api.coinable.dev/v1/api/checkouts?api_key=5600324db80841548a360f44b851fcf4' \
 --header 'Content-Type: application/json' \
 --data-raw '{
   "cancel_url": "https://<mywebsite.com>/cancel_order.html",
@@ -131,7 +131,7 @@ If a field is missing from a request, the `400` response will contain informatio
 
 ## Webhook setup
 
-Now we need to setup the applications webhook which is going to listen for notification related to Checkout events.
+Now we need to setup the applications webhook which is going to listen for notifications related to Checkout events.
 
 ```javascript title="Webhook example"
 const app = require('express')();
