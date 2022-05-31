@@ -4,7 +4,7 @@ sidebar_position: 0
 
 # Checkout
 
-The Checkout API allows any business to increase revenue generating channels and remain competitive in the oncoming digital commerce revolution. Accept Solana token payments online with Coinable's self-hosted Checkout page with integration only a few steps a away. Start accepting Solana eco-system tokens, including USDC, from today.
+The Checkout API allows any business to increase revenue-generating channels and remain competitive in the oncoming digital commerce revolution. Accept Solana token payments online with Coinable's self-hosted Checkout page with integration only a few steps away. Start accepting Solana eco-system tokens, including USDC, from today.
 
 Make sure to follow closely the steps outlined in the following paragraphs.
 
@@ -28,7 +28,7 @@ The API access key is required to access the Checkout session API. Your API acce
 
 ## Create a Checkout session
 
-The following steps will guide you through in creating a Checkout session on devnet.
+The following steps will guide you through creating a Checkout session on devnet.
 
 ### Checkout session endpoint
 
@@ -131,7 +131,7 @@ If a field is missing from a request, the `400` response will contain informatio
 
 ## Webhook setup
 
-Now we need to setup the applications webhook which is going to listen for notifications related to Checkout events.
+Now we need to set up the applications webhook which is going to listen for notifications related to Checkout events.
 
 ```javascript title="Webhook example"
 const app = require('express')();
@@ -161,9 +161,9 @@ Coinable can notify your application of the following events.
 
 | Event code                         | Description                                                                                                                                                                                                                                                                                                                                                                 |
 | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `checkout.session.completed`       | Checkout is complete and tokens have been transferred to the merchants wallet.                                                                                                                                                                                                                                                                                                         |
-| `checkout.session.payment_attempt` | There was a **payment attempt** in the Checkout session which doesn't mean that the payment was completed. **No tokens has been transferred to the merchant accounts yet.** Some developers choose to ignore this event, some use it for internal data metrics.                                                                                                              |
-| `checkout.session.failed`          | Occurs when there is a mismatch between the checkout amount and transfer amount. Contact customer for further investigation. Typically happens due to malicious payment attempt. |
+| `checkout.session.completed`       | Checkout is complete and tokens have been transferred to the merchant's wallet.                                                                                                                                                                                                                                                                                                         |
+| `checkout.session.payment_attempt` | There was a **payment attempt** in the Checkout session which doesn't mean that the payment was completed. **No tokens have been transferred to the merchant accounts yet.** Some developers choose to ignore this event, some use it for internal data metrics.                                                                                                              |
+| `checkout.session.failed`          | Occurs when there is a mismatch between the checkout amount and transfer amount. Contact customer for further investigation. Typically happens due to a malicious payment attempt. |
 
 ### Improving the webhook example
 

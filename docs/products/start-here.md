@@ -4,7 +4,7 @@ sidebar_position: 0
 
 # Start Here
 
-A user will be able to create many **projects**, where a project can represent a restaurant, e-shop, store, or a free-lance business.
+A user will be able to create many **projects**, where a project can represent a restaurant, e-shop, store, or a freelance business.
 
 In order to start accepting crypto payments, each project will need to specify:
 
@@ -16,7 +16,7 @@ In order to start accepting crypto payments, each project will need to specify:
 
 Each project will need to set a wallet address. The wallet address will be used to derive token accounts, where customers will directly transfer tokens accepted for payment.
 
-One can set the **wallet address** by going to the **Settings** tab and inputting address into the wallet address field.
+One can set the **wallet address** by going to the **Settings** tab and inputting the address into the wallet address field.
 
 
 
