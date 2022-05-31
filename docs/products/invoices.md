@@ -16,7 +16,7 @@ Any native SOL payments will be converted to the tokenized version wSOL to be pr
 
 ## Create an Invoice
 
-Users will be able to create invoices from the dashboard through a single click.
+Users will be able to create invoices from the dashboard with a single click.
 
 <div style={{textAlign: 'center', padding: '20px'}}>
 
@@ -25,7 +25,7 @@ Users will be able to create invoices from the dashboard through a single click.
 </div>
 
 
-Specify the USD amount to invoice, populate the required fields, including discounts and tax rates if applicable, and click **Create**. Share the unique link to a Coinable hosted invoice page with your customer for payment. Thats it.
+Specify the USD amount to invoice, populate the required fields, including discounts and tax rates if applicable, and click **Create**. Share the unique link to a Coinable hosted invoice page with your customer for payment. That's it.
 
 <div style={{textAlign: 'center', padding: '20px'}}>
 
