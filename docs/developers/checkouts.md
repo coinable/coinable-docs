@@ -197,9 +197,9 @@ app.post(
 
 Any platform can add a Web3 payments layer and earn fees on transactions done in the platform by integrating Coinable in just a few steps.
 
-The users of a given platform need to register with Coinable and set a wallet that will be used to accept payments through the Settings page.
-The users will need to whitelist the same tokens that are whitelisted by the platform.
-The users need to be able to share their project key with the platform which will be passed to origin_project_key field along with the desired platform_charge_rate in percentage terms (e.g. 0.5% is passed as 0.5).
+1. The users of a given platform need to register with Coinable and set a wallet that will be used to accept payments through the Settings page.
+2. The users will need to whitelist the same tokens that are whitelisted by the platform.
+3. The users need to be able to share their project key with the platform which will be passed to origin_project_key field along with the desired platform_charge_rate in percentage terms (e.g. 0.5% is passed as 0.5).
 
 ```json
  "on_behalf_of": {
