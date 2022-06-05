@@ -15,7 +15,7 @@ Any platform can add a Web3 payments layer and earn fees on transactions done on
 ```json
  "on_behalf_of": {
         "origin_project_key": "4Mmnho8Ys9hzkDBE3cdbWh",
-        "provider_charge_rate": 0.5
+        "platform_charge_rate": 0.5
     }
 ```
 
@@ -39,7 +39,7 @@ A typical flow with your new request may look like the following
   ],
   "on_behalf_of": {
     "origin_project_key": "4Mmnho8Ys9hzkDBE3cdbWh",
-    "provider_charge_rate": 0.5
+    "platform_charge_rate": 0.5
   }
 }
 ```
