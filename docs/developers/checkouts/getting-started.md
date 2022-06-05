@@ -1,8 +1,8 @@
 ---
 sidebar_position: 0
---- 
+---
 
-# Checkout
+# Getting Started
 
 The Checkout API allows any business to increase revenue-generating channels and remain competitive in the oncoming digital commerce revolution. Accept Solana token payments online with Coinable's self-hosted Checkout page with integration only a few steps away. Start accepting Solana eco-system tokens, including USDC, from today.
 
@@ -12,11 +12,11 @@ Make sure to follow closely the steps outlined in the following paragraphs.
 
 In order to accept token payments a wallet address is required. If you do not have a wallet address, follow the steps outlined at [Phantom](https://phantom.app/) wallet.
 
-Once you have a wallet address available, follow the steps described in the [Start here](http://localhost:3000/products/start-here) documentation. Once completed, you will have a main wallet set for your project, and tokens whitelisted for payment. We recommend starting with **Wrapped SOL** and **USDC** as your first tokens. 
+Once you have a wallet address available, follow the steps described in the [Start here](http://localhost:3000/products/start-here) documentation. Once completed, you will have a main wallet set for your project, and tokens whitelisted for payment. We recommend starting with **Wrapped SOL** and **USDC** as your first tokens.
 
 :::note
 
-Whitelisting **Wrapped SOL** will allow your customers to pay in *both* native SOL, and wSOL, the tokenized version of SOL.
+Whitelisting **Wrapped SOL** will allow your customers to pay in _both_ native SOL, and wSOL, the tokenized version of SOL.
 
 :::
 
@@ -38,12 +38,11 @@ To create a checkout session you will create a `POST` request to the following e
 https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
 ```
 
-
 ### Checkout session parameters
 
 `cancel_url` - The URL of the page that the customer will be directed to if they decide to cancel the checkout process.
 
-`success_url` - The URL of the page that the customer will be directed to on a successful checkout. Additional params can be passed such as  `{ORDER_NUMBER}`.
+`success_url` - The URL of the page that the customer will be directed to on a successful checkout. Additional params can be passed such as `{ORDER_NUMBER}`.
 
 `items` - An array of `Item` objects where the `Item` object is defined as having the following members.
 
@@ -112,7 +111,6 @@ curl --location --request POST 'https://api.coinable.dev/v1/api/checkouts?api_ke
 
 A JSON-encoded success response will have a single field `redirect_url` which will be the link directing to the Checkout session on Coinable. This URL can be linked to a checkout button.
 
-
 ```json title="200 Success"
 {
   "redirect_url": "https://coinable.dev/checkout/3qXPdcTkFjaQyfEn48FWfn"
@@ -158,12 +156,11 @@ app.post(
 
 Coinable can notify your application of the following events.
 
-
-| Event code                         | Description                                                                                                                                                                                                                                                                                                                                                                 |
-| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `checkout.session.completed`       | Checkout is complete and tokens have been transferred to the merchant's wallet.                                                                                                                                                                                                                                                                                                         |
-| `checkout.session.payment_attempt` | There was a **payment attempt** in the Checkout session which doesn't mean that the payment was completed. **No tokens have been transferred to the merchant accounts yet.** Some developers choose to ignore this event, some use it for internal data metrics.                                                                                                              |
-| `checkout.session.failed`          | Occurs when there is a mismatch between the checkout amount and transfer amount. Contact customer for further investigation. Typically happens due to a malicious payment attempt. |
+| Event code                         | Description                                                                                                                                                                                                                                                      |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `checkout.session.completed`       | Checkout is complete and tokens have been transferred to the merchant's wallet.                                                                                                                                                                                  |
+| `checkout.session.payment_attempt` | There was a **payment attempt** in the Checkout session which doesn't mean that the payment was completed. **No tokens have been transferred to the merchant accounts yet.** Some developers choose to ignore this event, some use it for internal data metrics. |
+| `checkout.session.failed`          | Occurs when there is a mismatch between the checkout amount and transfer amount. Contact customer for further investigation. Typically happens due to a malicious payment attempt.                                                                               |
 
 ### Improving the webhook example
 
