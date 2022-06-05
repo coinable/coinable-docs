@@ -193,17 +193,13 @@ app.post(
 );
 ```
 
-## On behalf of (OBO) system
+## On Behalf Of (OBO) System
 
-If you want to become a payment provider using Coinable so your users can earn on your platform independently,
-now you can! To start charging fees per transaction you just need to add the following object to your session intiaing call
+Any platform can add a Web3 payments layer and earn fees on transactions done in the platform by integrating Coinable in just a few steps.
 
-1. Your users need to register on Coinable
-2. Setup their wallet where they will accept payments
-3. Whitelist the same tokens as the Provider (you)
-4. Provider needs to have an ability to let users input their `origin_project_key`, users should provide their
-   project key which they can find under the API Access tab on Coinable.
-5. Set your desired `provider_charge_rate` in percent to earn per transaction initeated by your users on your platform
+The users of a given platform need to register with Coinable and set a wallet that will be used to accept payments through the Settings page.
+The users will need to whitelist the same tokens that are whitelisted by the platform.
+The users need to be able to share their project key with the platform which will be passed to origin_project_key field along with the desired platform_charge_rate in percentage terms (e.g. 0.5% is passed as 0.5).
 
 ```json
  "on_behalf_of": {
