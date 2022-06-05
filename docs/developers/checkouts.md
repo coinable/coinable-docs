@@ -1,6 +1,6 @@
 ---
 sidebar_position: 0
---- 
+---
 
 # Checkout
 
@@ -12,11 +12,11 @@ Make sure to follow closely the steps outlined in the following paragraphs.
 
 In order to accept token payments a wallet address is required. If you do not have a wallet address, follow the steps outlined at [Phantom](https://phantom.app/) wallet.
 
-Once you have a wallet address available, follow the steps described in the [Start here](http://localhost:3000/products/start-here) documentation. Once completed, you will have a main wallet set for your project, and tokens whitelisted for payment. We recommend starting with **Wrapped SOL** and **USDC** as your first tokens. 
+Once you have a wallet address available, follow the steps described in the [Start here](http://localhost:3000/products/start-here) documentation. Once completed, you will have a main wallet set for your project, and tokens whitelisted for payment. We recommend starting with **Wrapped SOL** and **USDC** as your first tokens.
 
 :::note
 
-Whitelisting **Wrapped SOL** will allow your customers to pay in *both* native SOL, and wSOL, the tokenized version of SOL.
+Whitelisting **Wrapped SOL** will allow your customers to pay in _both_ native SOL, and wSOL, the tokenized version of SOL.
 
 :::
 
@@ -38,12 +38,11 @@ To create a checkout session you will create a `POST` request to the following e
 https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
 ```
 
-
 ### Checkout session parameters
 
 `cancel_url` - The URL of the page that the customer will be directed to if they decide to cancel the checkout process.
 
-`success_url` - The URL of the page that the customer will be directed to on a successful checkout. Additional params can be passed such as  `{ORDER_NUMBER}`.
+`success_url` - The URL of the page that the customer will be directed to on a successful checkout. Additional params can be passed such as `{ORDER_NUMBER}`.
 
 `items` - An array of `Item` objects where the `Item` object is defined as having the following members.
 
@@ -112,7 +111,6 @@ curl --location --request POST 'https://api.coinable.dev/v1/api/checkouts?api_ke
 
 A JSON-encoded success response will have a single field `redirect_url` which will be the link directing to the Checkout session on Coinable. This URL can be linked to a checkout button.
 
-
 ```json title="200 Success"
 {
   "redirect_url": "https://coinable.dev/checkout/3qXPdcTkFjaQyfEn48FWfn"
@@ -158,12 +156,11 @@ app.post(
 
 Coinable can notify your application of the following events.
 
-
-| Event code                         | Description                                                                                                                                                                                                                                                                                                                                                                 |
-| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `checkout.session.completed`       | Checkout is complete and tokens have been transferred to the merchant's wallet.                                                                                                                                                                                                                                                                                                         |
-| `checkout.session.payment_attempt` | There was a **payment attempt** in the Checkout session which doesn't mean that the payment was completed. **No tokens have been transferred to the merchant accounts yet.** Some developers choose to ignore this event, some use it for internal data metrics.                                                                                                              |
-| `checkout.session.failed`          | Occurs when there is a mismatch between the checkout amount and transfer amount. Contact customer for further investigation. Typically happens due to a malicious payment attempt. |
+| Event code                         | Description                                                                                                                                                                                                                                                      |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `checkout.session.completed`       | Checkout is complete and tokens have been transferred to the merchant's wallet.                                                                                                                                                                                  |
+| `checkout.session.payment_attempt` | There was a **payment attempt** in the Checkout session which doesn't mean that the payment was completed. **No tokens have been transferred to the merchant accounts yet.** Some developers choose to ignore this event, some use it for internal data metrics. |
+| `checkout.session.failed`          | Occurs when there is a mismatch between the checkout amount and transfer amount. Contact customer for further investigation. Typically happens due to a malicious payment attempt.                                                                               |
 
 ### Improving the webhook example
 
@@ -195,3 +192,51 @@ app.post(
   }
 );
 ```
+
+## On behalf of (OBO) system
+
+If you want to become a payment provider using Coinable so your users can earn on your platform independently,
+now you can! To start charging fees per transaction you just need to add the following object to your session intiaing call
+
+1. Your users need to register on Coinable
+2. Setup their wallet where they will accept payments
+3. Whitelist the same tokens as the Provider (you)
+4. Provider needs to have an ability to let users input their `origin_project_key`, users should provide their
+   project key which they can find under the API Access tab on Coinable.
+5. Set your desired `provider_charge_rate` in percent to earn per transaction initeated by your users on your platform
+
+```json
+ "on_behalf_of": {
+        "origin_project_key": "4Mmnho8Ys9hzkDBE3cdbWh",
+        "provider_charge_rate": 0.5
+    }
+```
+
+A typical flow with your new request may look like the following
+
+```json
+{
+  "cancel_url": "https://coinable.dev/cancel_order.html",
+  "success_url": "https://coinable.dev/success?order_number={ORDER_NUMBER}",
+  "items": [
+    {
+      "price": 50,
+      "quantity": 1,
+      "display_name": "Gucci Stainless-Steel Glasses 2019 Limited Edition"
+    },
+    {
+      "price": 30,
+      "quantity": 1,
+      "display_name": "Balenciaga Jacket VN-2012"
+    }
+  ],
+  "on_behalf_of": {
+    "origin_project_key": "4Mmnho8Ys9hzkDBE3cdbWh",
+    "provider_charge_rate": 0.5
+  }
+}
+```
+
+It is the Providers responsobility to store the `origin_project_key` in your own database and initiate
+new checkout sessions per user however you see fit for your use case. e.g. in a metaverse a buy button would prompt the
+checkout page to the user on behalf of the merchant providing the item/service/whatever he or she sells.
