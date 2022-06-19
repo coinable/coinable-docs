@@ -18,4 +18,4 @@ Help us improve our documentation by contributing to our [documentation](https:/
 > We are iterating fast and the platform and respective services are heavily under construction as we move towards a beta release.
 > Feedback in relation to feature requests and bug reports are greatly appreciated.
 >
-> **Want to learn more?** Join our [Discord community](https://discord.gg/Q8XtTCCqBj), and feel free to ask questions and share your thoughts. We also have a bug bounty system that grants a discount for the upcoming Coinable Founders NFT collection mint.
+> **Want to learn more?** Join our [Discord community](https://discord.gg/RgU669RNRk), and feel free to ask questions and share your thoughts. We also have a bug bounty system that grants a discount for the upcoming Coinable Founders NFT collection mint.
