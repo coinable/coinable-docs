@@ -22,5 +22,5 @@ Please leave an issue first before starting to make a contribution to avoid dupl
 
 Looking to get in touch?
 
-- [Discord](https://discord.gg/coinable)
+- [Discord](https://discord.gg/RgU669RNRk)
 - [@coinablepay](https://twitter.com/coinablepay) on Twitter
