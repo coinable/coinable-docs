@@ -44,6 +44,8 @@ https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
 
 `success_url` - The URL of the page that the customer will be directed to on a successful checkout. Additional params can be passed such as `{ORDER_NUMBER}`.
 
+`request_currency` - Optional field, You can set the amount in a wide range of currencies such as `HKD`, `ILS`, `USD` and many more. If not set, defaults to currency set in the Settings tab.
+
 `items` - An array of `Item` objects where the `Item` object is defined as having the following members.
 
 - `price` - The price of the product.
