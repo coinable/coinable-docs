@@ -14,7 +14,7 @@ In order to start accepting crypto payments, each project will need to specify:
 
 ## Set wallet address
 
-Each project will need to set a wallet address. The wallet address will be used to derive token accounts, where customers will directly transfer tokens accepted for payment.
+Each project will need to set a wallet address. The wallet address will be used to derive token accounts, where customers will transfer tokens accepted for payment directly to the specified wallet.
 
 One can set the **wallet address** by going to the **Settings** tab and inputting the address into the wallet address field.
 
