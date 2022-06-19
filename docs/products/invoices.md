@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Invoices
 
-Coinable's invoice service allows merchants to invoice customers in USD and accept any whitelisted tokens. Customers will be able to pay through **a single interface** regardless of if they are paying with native SOL or a whitelisted token with **payments settled into your wallet instantly**.
+Coinable's invoice service allows merchants to invoice customers and accept any tokens whitelisted by the merchant. Customers will be able to pay through **a single interface** regardless of if they are paying with native SOL or a whitelisted token with **payments settled into the merchant's wallet instantly**.
 
 
 :::note

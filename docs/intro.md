@@ -5,11 +5,13 @@ slug: /
 
 # Introduction
 
-**Coinable** is a next-generation payment gateway and processing platform powered by the [Solana blockchain](https://solana.com/). Built for merchants, freelancers, and for anyone planning to accept native sol or tokens as a form of payment. Coinable provides an Application Programming Interface (API) that can be used to build decentralized Web3 payment experiences, which is easy to follow and integrate. **Transform your business to be Web3 compatible and competitive** in the coming digital commerce revolution.
+**Coinable** is a non-custodial payments platform powered by the [Solana blockchain](https://solana.com/). We are focused on the merchant experience and increasing accessibility and borderless P2P commerce opportunities for everyone. All a person needs is a web connection, wallet, and Coinable's Web3 merchant toolbox to deliver next-gen digital commerce experiences from the palm of their hands.
 
-This documentation is provided for anyone interested in accepting native SOL and tokens such as USDC, wSOL, and any other tokens in the [Solana ecosystem](https://coinmarketcap.com/view/solana-ecosystem/).
+Coinable provides an Application Programming Interface (API) that can be used to build decentralized Web3 payment experiences, which is easy to follow and integrate. Merchants can now **transform businesses to be Web3 compatible and competitive** in the coming digital commerce revolution.
 
-You can help us improve our documentation by contributing to our [documentation](https://github.com/coinable/coinable-docs).
+This documentation is for anyone interested in accepting native SOL or tokens such as USDC, wSOL, and any other tokens in the [Solana ecosystem](https://coinmarketcap.com/view/solana-ecosystem/).
+
+Help us improve our documentation by contributing to our [documentation](https://github.com/coinable/coinable-docs).
 
 > **NOTE**
 >
