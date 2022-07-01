@@ -95,7 +95,7 @@ curl --location --request POST 'https://api.coinable.dev/v1/api/checkouts?api_ke
         "min_value": 1
       },
       "display_name": "Free shipping",
-      "price": 20.0,
+      "price": 0,
       "type": "fixed_amount"
     },
     {
