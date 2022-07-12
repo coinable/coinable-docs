@@ -39,7 +39,7 @@ Once the customer accesses the link, they will have the option to select a white
 
 <div style={{textAlign: 'center', padding: '20px'}}>
 
-![Create Invoice](/img/products/customer-view-2.png)
+![Customer View](/img/products/customer-view-2.png)
 
 </div>
 
