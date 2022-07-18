@@ -26,7 +26,7 @@ Whitelisting **Wrapped SOL** will allow your customers to pay in _both_ native S
 
 The API access key is required to access the Checkout session API. Your API access key is located in the [API Access](https://coinable.dev/dashboard/api) tab in your Dashboard. Each project will be assigned a unique API key and should be kept secure.
 
-## Create a Checkout session
+## Create a checkout session
 
 The following steps will guide you through creating a Checkout session on devnet.
 
@@ -50,9 +50,12 @@ https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
 
 - `price` - The price of the product.
 - `quantity` - The quantity ordered.
-- `display_name` - The name of the product.
+- `title` - The name of the product.
 - `description` - An optional product description.
 - `image_url` - An optional product image. A placeholder will be used if no URL is provided.
+- `currency` -An optional currency mint. If not provided, checkout currency will be used instead.
+
+  Its also possible to use your `Products` created in the Products tab from the dashboard by adding - `id` - Your product id. - `quantity` - the quantity of the product.
 
 `shipping_options` - optional. An array of `ShippingOption`, which defines the shipping options available to the customer. If left undefined, shipping is not needed for the respective product, e.g. a game key.
 
@@ -64,50 +67,49 @@ https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
   - `min_value` - the numerical representation of the minimum unit until shipping.
   - `max_value` - the numerical representation of the maximum unit until shipping.
 - `type` - optional. Type of payment, defaults to `fixed_amount`(Not editable at the moment).
-- `currency` - optional. The stable coin in which the payment is based, defaults to `USDC` (Not editable at the moment).
 
-### Creating a Checkout session
+### Creating a checkout session
 
 Send a request to the Checkout API on devnet using the following command.
 
 ```json title="Checkout session creation"
-curl --location --request POST 'https://api.coinable.dev/v1/api/checkouts?api_key=5600324db80841548a360f44b851fcf4' \
+curl --location --request POST 'https://api.coinable.dev/v1/api/checkouts?api_key=YOUR_API_KEY' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "cancel_url": "https://<mywebsite.com>/cancel_order.html",
-  "success_url": "https://<mywebsite.com>/success?order_number={ORDER_NUMBER}",
-  "items": [
-    {
-      "price": 15,
-      "quantity": 2,
-      "display_name": "Black summer slippers"
-    },
-    {
-      "price": 49.99,
-      "quantity": 1,
-      "display_name": "Blue sunglasses with chromatic texture"
-    }
-  ],
-  "shipping_options": [
-    {
-      "delivery_estimate": {
-        "max_value": 2,
-        "min_value": 1
-      },
-      "display_name": "Free shipping",
-      "price": 0,
-      "type": "fixed_amount"
-    },
-    {
-      "delivery_estimate": {
-        "max_value": 1,
-        "min_value": 1
-      },
-      "display_name": "Same day shipping",
-      "price": 25.99,
-      "type": "fixed_amount"
-    }
-  ]
+    "cancel_url": "https://coinable.dev/cancel_order.html",
+    "success_url": "https://coinable.dev/success?order_number={ORDER_NUMBER}",
+    "request_currency": "USD",
+    "products": [
+        {
+            "id": "FRD6rFSPLHfVoziyzY4qun",
+            "quantity": 1
+        },
+        {
+            "price": 15,
+            "quantity": 3,
+            "title": "Whatever"
+        }
+    ],
+    "shipping_options": [
+        {
+            "delivery_estimate": {
+                "max_value": 2,
+                "min_value": 1
+            },
+            "display_name": "Free shipping",
+            "price": 0,
+            "type": "fixed_amount"
+        },
+        {
+            "delivery_estimate": {
+                "max_value": 1,
+                "min_value": 1
+            },
+            "display_name": "Same day shipping",
+            "price": 25,
+            "type": "fixed_amount"
+        }
+    ]
 }'
 ```
 
@@ -154,7 +156,7 @@ app.post(
 );
 ```
 
-### Coinable webhook Checkout events
+### Coinable webhook checkout events
 
 Coinable can notify your application of the following events.
 
