@@ -44,7 +44,7 @@ https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
 
 `success_url` - The URL of the page that the customer will be directed to on a successful checkout. Additional params can be passed such as `{ORDER_NUMBER}`.
 
-`request_currency` - You can specify the checkout currency both in token representation, or the fiat representation using an appropriate mint.
+`request_currency` - You can specify the checkout currency both in a fiat representation, or a token representation using an appropriate mint.
 
 `products` - An array of `Product` objects where the `Product` object is defined by the following fields.
 
@@ -55,7 +55,7 @@ https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
 - `image_url` - An optional product image. A placeholder will be used if no URL is provided.
 - `currency` -An optional currency mint. If not provided, checkout currency will be used instead.
 
-  Its also possible to use your `Products` created in the Products tab from the dashboard by adding - `id` - Your product id. - `quantity` - the quantity of the product.
+  Its also possible to use your `Products` created in the Products tab from the dashboard by adding - `id` - the product id. - `quantity` - the quantity of the product.
 
 `shipping_options` - optional. An array of `ShippingOption`, which defines the shipping options available to the customer. If left undefined, shipping is not needed for the respective product, e.g. a game key.
 
