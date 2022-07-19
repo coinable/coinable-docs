@@ -44,10 +44,9 @@ https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
 
 `success_url` - The URL of the page that the customer will be directed to on a successful checkout. Additional params can be passed such as `{ORDER_NUMBER}`.
 
-`request_currency` - Optional field, You can set the amount in a wide range of currencies such as `HKD`, `ILS`, `USD` and many more. If not set, defaults to currency set in the Settings tab.
+`request_currency` - You can specify the checkout currency both in a fiat representation, or a token representation using an appropriate mint.
 
-`items` - An array of `Item` objects where the `Item` object is defined as having the following members.
-
+`products` - An array of `Product` objects where the `Product` object is defined by the following fields.
 - `price` - The price of the product.
 - `quantity` - The quantity ordered.
 - `title` - The name of the product.
@@ -113,7 +112,7 @@ curl --location --request POST 'https://api.coinable.dev/v1/api/checkouts?api_ke
 }'
 ```
 
-A JSON-encoded success response will have a single field `redirect_url` which will be the link directing to the Checkout session on Coinable. This URL can be linked to a checkout button.
+A JSON-encoded success response will have a single field `redirect_url` which will be the link directing to the checkout session on Coinable. This URL can be linked to a checkout button.
 
 ```json title="200 Success"
 {
@@ -133,7 +132,7 @@ If a field is missing from a request, the `400` response will contain informatio
 
 ## Webhook setup
 
-Now we need to set up the applications webhook which is going to listen for notifications related to Checkout events.
+Now we need to set up the applications webhook which is going to listen for notifications related to checkout events.
 
 ```javascript title="Webhook example"
 const app = require('express')();
