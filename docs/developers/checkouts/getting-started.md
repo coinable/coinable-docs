@@ -47,7 +47,6 @@ https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
 `request_currency` - You can specify the checkout currency both in a fiat representation, or a token representation using an appropriate mint.
 
 `products` - An array of `Product` objects where the `Product` object is defined by the following fields.
-
 - `price` - The price of the product.
 - `quantity` - The quantity ordered.
 - `title` - The name of the product.
