@@ -113,7 +113,7 @@ curl --location --request POST 'https://api.coinable.dev/v1/api/checkouts?api_ke
 }'
 ```
 
-A JSON-encoded success response will have a single field `redirect_url` which will be the link directing to the Checkout session on Coinable. This URL can be linked to a checkout button.
+A JSON-encoded success response will have a single field `redirect_url` which will be the link directing to the checkout session on Coinable. This URL can be linked to a checkout button.
 
 ```json title="200 Success"
 {
@@ -133,7 +133,7 @@ If a field is missing from a request, the `400` response will contain informatio
 
 ## Webhook setup
 
-Now we need to set up the applications webhook which is going to listen for notifications related to Checkout events.
+Now we need to set up the applications webhook which is going to listen for notifications related to checkout events.
 
 ```javascript title="Webhook example"
 const app = require('express')();
