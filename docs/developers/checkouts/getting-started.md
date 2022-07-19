@@ -55,7 +55,7 @@ https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
 - `image_url` - An optional product image. A placeholder will be used if no URL is provided.
 - `currency` -An optional currency mint. If not provided, checkout currency will be used instead.
 
-  Its also possible to use your `Products` created in the Products tab from the dashboard by adding - `id` - Your product id. - `quantity` - the quantity of the product.
+  Its also possible to use your `Products` created in the Products tab from the dashboard by adding - `id` - the product id. - `quantity` - the quantity of the product.
 
 `shipping_options` - optional. An array of `ShippingOption`, which defines the shipping options available to the customer. If left undefined, shipping is not needed for the respective product, e.g. a game key.
 
