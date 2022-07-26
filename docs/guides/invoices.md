@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Invoices
@@ -20,7 +20,7 @@ Users will be able to create invoices from the dashboard with a single click.
 
 <div style={{textAlign: 'center', padding: '20px'}}>
 
-![One Click Start](/img/products/create-invoice.png)
+![One Click Start](/img/guides/create-invoice.png)
 
 </div>
 
@@ -29,7 +29,7 @@ Specify the USD amount to invoice, populate the required fields, including disco
 
 <div style={{textAlign: 'center', padding: '20px'}}>
 
-![Create Invoice](/img/products/create-invoice-2.png)
+![Create Invoice](/img/guides/create-invoice-2.png)
 
 </div>
 
@@ -39,7 +39,7 @@ Once the customer accesses the link, they will have the option to select a white
 
 <div style={{textAlign: 'center', padding: '20px'}}>
 
-![Customer View](/img/products/customer-view-2.png)
+![Customer View](/img/guides/customer-view-2.png)
 
 </div>
 
@@ -50,7 +50,7 @@ The dashboard lets you track the state of the invoice from pending to fulfilled,
 
 <div style={{textAlign: 'center', padding: '20px'}}>
 
-![Dashboard Pending](/img/products/dashboard-pending.png)
+![Dashboard Pending](/img/guides/dashboard-pending.png)
 
 </div>
 
@@ -58,6 +58,6 @@ Once the invoice has been fulfilled the dashboard will indicate which token was 
 
 <div style={{textAlign: 'center', padding: '20px'}}>
 
-![Dashboard Fulfilled](/img/products/dashboard-fulfilled.png)
+![Dashboard Fulfilled](/img/guides/dashboard-fulfilled.png)
 
 </div>

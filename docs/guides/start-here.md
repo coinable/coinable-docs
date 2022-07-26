@@ -22,7 +22,7 @@ One can set the **wallet address** by going to the **Settings** tab and inputtin
 
 <div style={{textAlign: 'center', padding: '20px'}}>
 
-![Settings Wallet Address](/img/products/settings-wallet-address.png)
+![Settings Wallet Address](/img/guides/settings-wallet-address.png)
 
 </div>
 
@@ -46,6 +46,6 @@ To whitelist tokens for a given project, go to **Settings** and connect your wal
 
 <div style={{textAlign: 'center', padding: '20px'}}>
 
-![Whitelist Tokens](/img/products/whitelist-tokens.png)
+![Whitelist Tokens](/img/guides/whitelist-tokens.png)
 
 </div>
