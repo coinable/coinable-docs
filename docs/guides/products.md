@@ -17,11 +17,11 @@ Products allow users to create products to use with invoices, checkouts, and sto
 
 ## Gate products by NFT collections
 
-Merchants will be able to gate products by NFT collections by simply selecting the collections to gate by at creation time. Coinable automatically checks for proof of membership and handles onchain verification on behalf of the merchant.
+Merchants will be able to gate products by NFT collections by simply selecting the collections at product creation time. Coinable automatically checks for the NFTs in the consumers wallet as a proof of membership and handles onchain verification on behalf of the merchant.
 
 :::note
 
-As of 7/26/2022, merchants can select up to two collections, where the consumer will be required to show proof of membership for the both collections. 
+As of 7/26/2022, merchants can select up to two collections, where the consumer will be required to hold proof of membership for both collections in order to successfully complete a payment.
 
 :::
 
