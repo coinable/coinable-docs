@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Coinable Documentation',
   tagline: 'Your token based payment gateway powered by Solana',
-  url: 'https://docs.coinable.dev/',
+  url: 'https://coinablepay.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -77,7 +77,7 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/coinable',
+                href: 'https://discord.com/invite/RgU669RNRk',
               },
               {
                 label: 'Twitter',
