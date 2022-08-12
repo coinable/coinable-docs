@@ -12,7 +12,7 @@ Make sure to follow closely the steps outlined in the following paragraphs.
 
 In order to accept token payments a wallet address is required. If you do not have a wallet address, follow the steps outlined at [Phantom](https://phantom.app/) wallet.
 
-Once you have a wallet address available, follow the steps described in the [Start here](http://localhost:3000/products/start-here) documentation. Once completed, you will have a main wallet set for your project, and tokens whitelisted for payment. We recommend starting with **Wrapped SOL** and **USDC** as your first tokens.
+Once you have a wallet address available, follow the steps described in the [Start here](/guides/start-here) documentation. Once completed, you will have a main wallet set for your project, and tokens whitelisted for payment. We recommend starting with **Wrapped SOL** and **USDC** as your first tokens.
 
 :::note
 
@@ -47,6 +47,7 @@ https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
 `request_currency` - You can specify the checkout currency both in a fiat representation, or a token representation using an appropriate mint.
 
 `products` - An array of `Product` objects where the `Product` object is defined by the following fields.
+
 - `price` - The price of the product.
 - `quantity` - The quantity ordered.
 - `title` - The name of the product.
@@ -71,7 +72,7 @@ https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
 
 Send a request to the Checkout API on devnet using the following command.
 
-```json title="Checkout session creation"
+```bash title="Checkout session creation"
 curl --location --request POST 'https://api.coinable.dev/v1/api/checkouts?api_key=YOUR_API_KEY' \
 --header 'Content-Type: application/json' \
 --data-raw '{
