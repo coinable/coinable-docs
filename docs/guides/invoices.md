@@ -25,7 +25,7 @@ Users will be able to create invoices from the dashboard with a single click.
 </div>
 
 
-Specify the USD amount to invoice, populate the required fields, including discounts and tax rates if applicable, and click **Create**. Share the unique link to a Coinable hosted invoice page with your customer for payment. That's it.
+Specify the amount to invoice, populate the required fields, including discounts and tax rates if applicable, and click **Create**. Share the unique link to a Coinable hosted invoice page with your customer for payment. That's it.
 
 <div style={{textAlign: 'center', padding: '20px'}}>
 
@@ -35,7 +35,7 @@ Specify the USD amount to invoice, populate the required fields, including disco
 
 ## Customer View
 
-Once the customer accesses the link, they will have the option to select a whitelisted token to use for payment. The USD equivalent amount of the selected token will be transferred to your wallet instantly.
+Once the customer accesses the link, they will have the option to select a whitelisted token to use for payment. The fiat equivalent amount of the selected token will be transferred to your wallet instantly.
 
 <div style={{textAlign: 'center', padding: '20px'}}>
 
