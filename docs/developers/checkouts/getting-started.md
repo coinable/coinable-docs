@@ -6,6 +6,8 @@ sidebar_position: 0
 
 The Checkout API allows any business to increase revenue-generating channels and remain competitive in the oncoming digital commerce revolution. Accept Solana token payments online with Coinable's self-hosted Checkout page with integration only a few steps away. Start accepting Solana eco-system tokens, including USDC, from today.
 
+**Checkout pages are fully customizable and optimized for mobile.**
+
 Make sure to follow closely the steps outlined in the following paragraphs.
 
 ## Getting Started
@@ -72,8 +74,13 @@ https://api.coinablepay.com/v1/api/checkouts?api_key=<YOUR_API_KEY>
 
 Send a request to the Checkout API on devnet using the following command.
 
+<<<<<<< HEAD
 ```bash title="Checkout session creation"
 curl --location --request POST 'https://api.coinable.dev/v1/api/checkouts?api_key=YOUR_API_KEY' \
+=======
+```json title="Checkout session creation"
+curl --location --request POST 'https://api.coinablepay.com/v1/api/checkouts?api_key=YOUR_API_KEY' \
+>>>>>>> dev
 --header 'Content-Type: application/json' \
 --data-raw '{
     "cancel_url": "https://coinablepay.com/cancel_order.html",

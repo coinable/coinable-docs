@@ -23,8 +23,8 @@ A typical flow with your new request may look like the following
 
 ```json
 {
-  "cancel_url": "https://coinable.dev/cancel_order.html",
-  "success_url": "https://coinable.dev/success?order_number={ORDER_NUMBER}",
+  "cancel_url": "https://coinablepay.com/cancel_order.html",
+  "success_url": "https://coinablepay.com/success?order_number={ORDER_NUMBER}",
   "items": [
     {
       "price": 50,
