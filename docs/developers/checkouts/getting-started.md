@@ -24,7 +24,7 @@ Whitelisting **Wrapped SOL** will allow your customers to pay in _both_ native S
 
 ### Private Access Key (API Key)
 
-The API access key is required to access the Checkout session API. Your API access key is located in the [API Access](https://coinable.dev/dashboard/api) tab in your Dashboard. Each project will be assigned a unique API key and should be kept secure.
+The API access key is required to access the Checkout session API. Your API access key is located in the [API Access](https://coinablepay.com/dashboard/api) tab in your Dashboard. Each project will be assigned a unique API key and should be kept secure.
 
 ## Create a checkout session
 
@@ -35,7 +35,7 @@ The following steps will guide you through creating a Checkout session on devnet
 To create a checkout session you will create a `POST` request to the following endpoint. Replace `<YOUR_API_KEY>` with your own API key. An example running on devnet will be provided in the following section.
 
 ```
-https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
+https://api.coinablepay.com/v1/api/checkouts?api_key=<YOUR_API_KEY>
 ```
 
 ### Checkout session parameters
@@ -73,11 +73,11 @@ https://api.coinable.dev/v1/api/checkouts?api_key=<YOUR_API_KEY>
 Send a request to the Checkout API on devnet using the following command.
 
 ```json title="Checkout session creation"
-curl --location --request POST 'https://api.coinable.dev/v1/api/checkouts?api_key=YOUR_API_KEY' \
+curl --location --request POST 'https://api.coinablepay.com/v1/api/checkouts?api_key=YOUR_API_KEY' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "cancel_url": "https://coinable.dev/cancel_order.html",
-    "success_url": "https://coinable.dev/success?order_number={ORDER_NUMBER}",
+    "cancel_url": "https://coinablepay.com/cancel_order.html",
+    "success_url": "https://coinablepay.com/success?order_number={ORDER_NUMBER}",
     "request_currency": "USD",
     "products": [
         {
@@ -117,7 +117,7 @@ A JSON-encoded success response will have a single field `redirect_url` which wi
 
 ```json title="200 Success"
 {
-  "redirect_url": "https://coinable.dev/checkout/3qXPdcTkFjaQyfEn48FWfn"
+  "redirect_url": "https://coinablepay.com/checkout/3qXPdcTkFjaQyfEn48FWfn"
 }
 ```
 
