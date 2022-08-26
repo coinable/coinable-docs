@@ -41,7 +41,7 @@ The Balances page will indicate the state of your token accounts. If a token acc
 Once the tokens to accept have been set, customers will be able to pay in any tokens that have been whitelisted for a given project. For example, if only USDC is whitelisted, customers will only be able to pay in USDC.
 
 
-To whitelist tokens for a given project, go to **Settings** and connect your wallet. Click on the tokens that you would like to accept as payment and click the **Update whitelist** button, and hit approve to reflect the changes on the blockchain.
+To whitelist tokens for a given project, go to **Settings** and connect your wallet. Make sure to connect the same wallet that you specified in the previous step. Click on the tokens that you would like to accept as payment and click the **Update whitelist** button, and hit approve to reflect the changes on the blockchain.
 
 
 <div style={{textAlign: 'center', padding: '20px'}}>
