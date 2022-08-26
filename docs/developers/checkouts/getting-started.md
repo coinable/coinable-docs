@@ -6,6 +6,8 @@ sidebar_position: 0
 
 The Checkout API allows any business to increase revenue-generating channels and remain competitive in the oncoming digital commerce revolution. Accept Solana token payments online with Coinable's self-hosted Checkout page with integration only a few steps away. Start accepting Solana eco-system tokens, including USDC, from today.
 
+**Checkout pages are fully customizable and optimized for mobile.**
+
 Make sure to follow closely the steps outlined in the following paragraphs.
 
 ## Getting Started
