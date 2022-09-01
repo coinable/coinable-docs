@@ -10,6 +10,13 @@ Storefronts are fully customizable so that the payment experience by the custome
 
 Don't let inconsistent branding or an unfriendly mobile experience negatively impact the sales conversion rate.
 
+:::note
+
+At the moment, only products priced in `USD`, i.e. where `Pricing currency/token` in the product create/edit field is set to `USD` will be displayed in the pre-built hosted storefront. More options available in 3Q/2022.
+
+:::
+
+
 # Store Preferences
 
 Through store preferences, users can specify the store name, description, socials, and also upload a banner to use with the storefront.
