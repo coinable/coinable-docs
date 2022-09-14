@@ -74,13 +74,9 @@ https://api.coinablepay.com/v1/api/checkouts?api_key=<YOUR_API_KEY>
 
 Send a request to the Checkout API on devnet using the following command.
 
-<<<<<<< HEAD
-```bash title="Checkout session creation"
-curl --location --request POST 'https://api.coinable.dev/v1/api/checkouts?api_key=YOUR_API_KEY' \
-=======
 ```json title="Checkout session creation"
+
 curl --location --request POST 'https://api.coinablepay.com/v1/api/checkouts?api_key=YOUR_API_KEY' \
->>>>>>> dev
 --header 'Content-Type: application/json' \
 --data-raw '{
     "cancel_url": "https://coinablepay.com/cancel_order.html",
@@ -118,6 +114,7 @@ curl --location --request POST 'https://api.coinablepay.com/v1/api/checkouts?api
         }
     ]
 }'
+
 ```
 
 A JSON-encoded success response will have a single field `redirect_url` which will be the link directing to the checkout session on Coinable. This URL can be linked to a checkout button.
