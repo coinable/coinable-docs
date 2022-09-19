@@ -37,7 +37,7 @@ Currently we support only Discord based webhooks, and can be set up follow the b
 
 You are all set to go. The Bot will now update the created channel with payments received through all Checkouts completed through Coinable.
 
-Example
+##### Example
 
 ```
 [New project]: New successful payment for 0.86 SOL for simple test product.
