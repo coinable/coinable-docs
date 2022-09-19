@@ -6,7 +6,7 @@ sidebar_position: 2
 
 There are two categories of webhooks available.
 
-1. Event Based Webhoks
+1. Event Based Webhooks
 2. Integration Webhooks
 
 ## Event Based Webhooks
@@ -22,7 +22,7 @@ The following events are emitted:
 | `checkout.session.failed`          | Occurs when there is a mismatch between the checkout amount and transfer amount. Contact customer for further investigation. Typically happens due to a malicious payment attempt.                                                                               |
 
 
-## Integration Webhook
+## Integration Webhooks
 
 ### Discord
 
