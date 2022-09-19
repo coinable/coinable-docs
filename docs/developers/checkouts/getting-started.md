@@ -70,6 +70,12 @@ https://api.coinablepay.com/v1/api/checkouts?api_key=<YOUR_API_KEY>
   - `max_value` - the numerical representation of the maximum unit until shipping.
 - `type` - optional. Type of payment, defaults to `fixed_amount`(Not editable at the moment).
 
+`custom_fields` - optional - An array of `CustomField`, which defines a custom field on your checkout form, which can be used for custom data that may be required for your business.
+
+- `required` - optional. Defaults to `false`. If set to `true`, the custom field will be required in order to continue the checkout.
+- `title` - the title of your field which will be used as a title in the checkout form.
+- `key` - the key under which the value of this field will be saved. The `key` must be unique, otherwise values will be overidden. The `key` also represents the field under the Order details, which takes the form of `key_name` -> `Key name`.
+
 ### Creating a checkout session
 
 Send a request to the Checkout API on devnet using the following command.
