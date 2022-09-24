@@ -1,26 +1,18 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 ---
 
-# Integrations
+import PayButton from '@coinable/pay-button';
 
-Coinable will offer variaty of possible plug and play integrations for already existing storefronts, websites, or any business that wants to accept crypto in a matter of minutes.
+# React
 
-## JavaScript
+Currently we offer a React based component integration that will let you setup a pay button anywhere you want it in your app with the ability to style it inlined with your website, see [Customization](/developers/checkouts/integrations/react#customization) section for details.
 
-TODO
+## Live example
 
-## React
+<PayButton productId="EKbTyXz5cPCspocqbRvFrE" onSuccess={(url) => {window.location.href = url;}} onFailure={(msg) => console.error(msg)} />
 
-Currently we offer a React based component integration that will let you setup a pay button anywhere you want it in your app with the ability to style it inlined with your website, see [Customization](/developers/checkouts/integrations#customization) section for details.
-
-<div style={{textAlign: 'center', paddingTop: '20px'}}>
-
-![Settings Wallet Address](/img/guides/react-integration-button.png)
-
-</div>
-
-### Installation & Usage
+## Installation & Usage
 
 Install via yarn using the following command (recommended)
 
@@ -51,7 +43,7 @@ Basic usage is as follows
    - `onSuccess` returns the checkout session url for our user to be redirected too and pay for the product.
    - `onFailure` returns an error message on why did the checkout session initiation has failed.
 
-### Example
+## Example
 
 An example of possible implementation in your React app could be:
 
@@ -103,11 +95,11 @@ Our final integration looks like this, **just in 33 lines of code**:
 
 </div>
 
-### Customization
+## Customization
 
 For customiztion of our freshly created buttons there are two approaches at the moment giving you the max possible styling ability.
 
-#### CSS/SCSS
+### CSS/SCSS
 
 Override the `coinable-pay-button` className and style the button CSS however you see fit for your website.
 
@@ -119,7 +111,7 @@ This approach will override all of the CSS that is provided out of the box. Its 
     <PayButton ... className="my-own-classname" />
 ```
 
-#### Styled Components
+### Styled Components
 
 ```js
 const StyledPayButton = styled(PayButton)`
@@ -133,7 +125,7 @@ const StyledPayButton = styled(PayButton)`
 `;
 ```
 
-#### Customization Props
+### Customization Props
 
 If you don't want to touch the underlying CSS of the pay button component we allow to change the basic styling like color of your button, some implementors find it sufficient for their need, the available props are `backgroundColor` and `textColor`. See example below.
 
@@ -145,7 +137,7 @@ If you don't want to touch the underlying CSS of the pay button component we all
     />
 ```
 
-### Props
+## Props
 
 Available props for the component are
 
