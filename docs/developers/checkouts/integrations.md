@@ -22,10 +22,16 @@ Currently we offer a React based component integration that will let you setup a
 
 ### Installation & Usage
 
-Install via yarn using the following command
+Install via yarn using the following command (recommended)
 
 ```bash
 yarn add @coinable/pay-button
+```
+
+via NPM
+
+```bash
+npm install @coinable/pay-button
 ```
 
 Basic usage is as follows
