@@ -12,17 +12,23 @@ TODO
 
 ## React
 
-Currently we offer a React based component integration that will let you setup a pay button anywhere you want it in your app with the ability to style it inlined with your website, see [Customization](sdsd) section for more info.
+Currently we offer a React based component integration that will let you setup a pay button anywhere you want it in your app with the ability to style it inlined with your website, see [Customization](/developers/checkouts/integrations#customization) section for details.
 
-<div style={{textAlign: 'center', padding: '20px'}}>
+<div style={{textAlign: 'center', paddingTop: '20px'}}>
 
 ![Settings Wallet Address](/img/guides/react-integration-button.png)
 
 </div>
 
-### Usage
+### Installation & Usage
 
-Integration example for the React based pay button component is as follows
+Install via yarn using the following command
+
+```bash
+yarn add @coinable/pay-button
+```
+
+Basic usage is as follows
 
 ```js
 <PayButton
@@ -82,7 +88,7 @@ export default App;
 
 Our final integration looks like this, **just in 33 lines of code**:
 
-<div style={{textAlign: 'center', padding: '20px'}}>
+<div style={{textAlign: 'center', paddingTop: '20px'}}>
 
 <video width="100%" height="auto" controls>
 
@@ -97,7 +103,11 @@ For customiztion of our freshly created buttons there are two approaches at the 
 
 #### CSS/SCSS
 
-Override the `coinable-pay-button` className and change whatever CSS you want there.
+Override the `coinable-pay-button` className and style the button CSS however you see fit for your website.
+
+:::note
+This approach will override all of the CSS that is provided out of the box. Its the implementors responsibility to rewrite styling of the button to their preference.
+:::
 
 ```js
     <PayButton ... className="my-own-classname" />
@@ -119,23 +129,30 @@ const StyledPayButton = styled(PayButton)`
 
 #### Customization Props
 
-If you don't want to touch the underlying CSS of the pay button component we allow to change the basic styling like color of your button, so find it sufficient for their need, the available props are `backgroundColor` and `textColor`. See example below.
+If you don't want to touch the underlying CSS of the pay button component we allow to change the basic styling like color of your button, some implementors find it sufficient for their need, the available props are `backgroundColor` and `textColor`. See example below.
 
 ```js
-    <PayButton ... backgroundColor="#FFF" textColor="#000" />
+    <PayButton
+      ...
+      backgroundColor="#1FC055"
+      textColor="rgb(204, 252, 162)"
+    />
 ```
 
 ### Props
 
 Available props for the component are
 
-| Prop name          | Description                                                                                                                                                 |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children?`        | If you want a different content inside of the pay button, instead of the default Pay text.                                                                  |
-| `productId`        | The product id you get from the product created through Coinable.                                                                                           |
-| `onSuccess`        | Callback which passes the url as the parameter which is used to redirect user to his generated checkout session.                                            |
-| `onFailure`        | Callback which passes the error message which should hint to while the checkout session generation failed.                                                  |
-| `quantity?`        | How much of the product is the user about to buy. **Defaults to `1` if not provided**                                                                       |
-| `requestCurrency?` | In which currency will the checkout session will be shown, can be token mint or a fiat currency such as `USD`, `EUR`, `JPY` etc, supporting all currencies. |
-| `backgroundColor?` | Background color of the pay button.                                                                                                                         |
-| `textColor?`       | Text color of the pay button.                                                                                                                               |
+| Prop name          | Description                                                                                                                                                                                            |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `productId`        | The product id you get from the product created through Coinable.                                                                                                                                      |
+| `onSuccess`        | Callback which passes the url as the parameter which is used to redirect user to his generated checkout session.                                                                                       |
+| `onFailure`        | Callback which passes the error message which should hint to while the checkout session generation failed.                                                                                             |
+| `quantity?`        | How much of the product is the user about to buy. **Defaults to `1` if not provided.**                                                                                                                 |
+| `requestCurrency?` | In which currency will the checkout session will be shown, can be token mint or a fiat currency such as `USD`, `EUR`, `JPY` etc, supporting all currencies. **Defaults to `USD`**                      |
+| `backgroundColor?` | Background color of the pay button. **Defaults to `black` if not provided.**                                                                                                                           |
+| `textColor?`       | Text color of the pay button. **Defaults to `white` if not provided.**                                                                                                                                 |
+| `children?`        | If you want a different content inside of the pay button, instead of the default Pay text. **Defaults to `Pay` if not provided.**                                                                      |
+| `className?`       | Lets you override the default className of the component which will give the ability to redefined the Buttons CSS, overrides the default style. **Defaults to `coinable-pay-button` if not provided.** |
+| `style?`           | We also provide the style `CSSProperties` object for your to add inlined JSS. **Defaults to `{}` if not provided.**                                                                                    |
+| `ref?`             | We also provide you with access to ref if DOM access is needed in some cases, if you don't know what this for you probably don't need to touch it.                                                     |
