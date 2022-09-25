@@ -4,7 +4,7 @@ sidebar_position: 0
 
 # JavaScript
 
-Coinable provides a one item checkout session endpoint bound per product id which can be used to initiate checkout sessions without a **api key**, the payment will be bound to the owner of the product. Typically used to integrate into simple websites, or when there is no back-end in the implementors website. With this seamless experience, both the implementer and Web3 user won't feel a difference.
+Coinable provides a single item checkout session endpoint bound to the product ID which can be used to initiate checkout sessions without an **api key**. The payment will be directed to the creator of the product. Typically used to integrate into simple websites, or when there is no related back-end.
 
 ## Endpoint
 
@@ -33,8 +33,8 @@ Optional fields are
 ```
 
 - `variant` can be used if a variant of product is selected, variants are specified by their name as they are saved to by the variants fields on the product page, as an example `Black / L` is a variant where the color is Black and the size is L.
-- `success_url` will redirect user to this url when successful payment has been made.
-- `cancel_url` will redirect user to this url when user closes the checkout session or goes back by click the back arrow button on the checkout page.
+- `success_url` will redirect customers to this url when successful payment has been made.
+- `cancel_url` will redirect customers to this url when a customer closes the checkout session or clicks the back arrow button on the checkout page.
 
 ## Usage Example
 
@@ -79,7 +79,7 @@ A successful response will look like the following:
 
 ### Error response
 
-An error resposne is also possible and will return the following format
+An error response is also possible and will return in the following format:
 
 ```json title="400 Bad request"
 {
