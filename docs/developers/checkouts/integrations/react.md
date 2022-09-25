@@ -38,19 +38,11 @@ Basic usage is as follows:
 />
 ```
 
-<<<<<<< HEAD
-
-1. Where `productId` we pass the product id of the product we setup in our Dashboard via the [Products](https://coinablepay.com/dashboard/products) tab.
-2. Then we have two callbacks that we need to implement
-
-   - `onSuccess` returns the checkout session url for our user to be redirected too and pay for the product.
-   - # `onFailure` returns an error message on why did the checkout session initiation has failed.
-
-3. Pass the ID of the product to `productId`. Products are set up through the [Products](https://coinablepay.com/dashboard/products) page on the Dashboard.
-4. Two callbacks need to be implemented.
+1. Pass the ID of the product to `productId`. Products are set up through the [Products](https://coinablepay.com/dashboard/products) page on the Dashboard.
+2. Two callbacks need to be implemented.
    - `onSuccess` returns the checkout session url for the customer to be redirected to and pay for the product.
    - `onFailure` returns an error message on why the checkout session initiation failed.
-     > > > > > > > ab45d1b12b00308abf0c4fc52b92eee482e3eafe
+
 
 #### Variants
 
