@@ -21,7 +21,6 @@ The following events are emitted:
 | `checkout.session.payment_attempt` | There was a **payment attempt** in the Checkout session which doesn't mean that the payment was completed. **No tokens have been transferred to the merchant accounts yet.** Some developers choose to ignore this event, some use it for internal data metrics. |
 | `checkout.session.failed`          | Occurs when there is a mismatch between the checkout amount and transfer amount. Contact customer for further investigation. Typically happens due to a malicious payment attempt.                                                                               |
 
-
 ## Integration Webhooks
 
 ### Discord
