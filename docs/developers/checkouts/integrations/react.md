@@ -38,10 +38,30 @@ Basic usage is as follows:
 />
 ```
 
-1. Pass the ID of the product to `productId`. Products are set up through the [Products](https://coinablepay.com/dashboard/products) page on the Dashboard.
-2. Two callbacks need to be implemented.
+<<<<<<< HEAD
+
+1. Where `productId` we pass the product id of the product we setup in our Dashboard via the [Products](https://coinablepay.com/dashboard/products) tab.
+2. Then we have two callbacks that we need to implement
+
+   - `onSuccess` returns the checkout session url for our user to be redirected too and pay for the product.
+   - # `onFailure` returns an error message on why did the checkout session initiation has failed.
+
+3. Pass the ID of the product to `productId`. Products are set up through the [Products](https://coinablepay.com/dashboard/products) page on the Dashboard.
+4. Two callbacks need to be implemented.
    - `onSuccess` returns the checkout session url for the customer to be redirected to and pay for the product.
    - `onFailure` returns an error message on why the checkout session initiation failed.
+     > > > > > > > ab45d1b12b00308abf0c4fc52b92eee482e3eafe
+
+#### Variants
+
+Coinable products have this term called Variant which is an ability to checkout with a product variant for example, if we are selling a T-shirt and it has 5 different sizes, and 2 different colors we have 10 variations of the shirt `2 * 5 = 10`. Take a look at how Coinable structured your variants and their names, this is the `variant` name that you will use to populate the `variant` prop so if we have a **L / Black** variant of your t-shirt this is what we will use. As an example this would be my implementation of a varianted product.
+
+```js
+<PayButton
+  // Previous necessary props here
+  variant="L / Black"
+/>
+```
 
 ## Example
 
@@ -108,7 +128,10 @@ This approach will override all of the CSS that is provided out of the box. It i
 :::
 
 ```js
-    <PayButton ... className="my-own-classname" />
+<PayButton
+  // Previous necessary props here
+  className="my-own-classname"
+/>
 ```
 
 ### Styled Components
@@ -130,27 +153,28 @@ const StyledPayButton = styled(PayButton)`
 Basic styling can be accomplished by using the available props `backgroundColor` and `textColor`. See example below.
 
 ```js
-    <PayButton
-      ...
-      backgroundColor="#1FC055"
-      textColor="rgb(204, 252, 162)"
-    />
+<PayButton
+  // Previous necessary props here
+  backgroundColor="#1FC055"
+  textColor="rgb(204, 252, 162)"
+/>
 ```
 
 ## Props
 
 Available props for the component are
 
-| Prop name          | Description                                                                                                                                                                                            |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `productId`        | The product ID you get from the product created through Coinable.                                                                                                                                      |
-| `onSuccess`        | Callback which passes the url as the parameter which is used to redirect customers to a checkout session.                                                                                       |
-| `onFailure`        | Callback which passes the error message which should indicate why the generation of a checkout session failed.                                                                                             |
-| `quantity?`        | The amount of product being requested for checkout. **Defaults to `1` if not provided.**                                                                                                                 |
-| `requestCurrency?` | The display currency of the checkout session. Can be a token mint or a fiat currency such as `USD`, `EUR`, `JPY` etc. **Defaults to `USD`.**                      |
-| `backgroundColor?` | Background color of the pay button. **Defaults to `black` if not provided.**                                                                                                                           |
-| `textColor?`       | Text color of the pay button. **Defaults to `white` if not provided.**                                                                                                                                 |
-| `children?`        | If you want different content inside of the pay button, instead of the default Pay text. **Defaults to `Pay` if not provided.**                                                                      |
+| Prop name          | Description                                                                                                                                                                                               |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `productId`        | The product ID you get from the product created through Coinable.                                                                                                                                         |
+| `onSuccess`        | Callback which passes the url as the parameter which is used to redirect customers to a checkout session.                                                                                                 |
+| `onFailure`        | Callback which passes the error message which should indicate why the generation of a checkout session failed.                                                                                            |
+| `quantity?`        | The amount of product being requested for checkout. **Defaults to `1` if not provided.**                                                                                                                  |
+| `variant?`         | If product utilizes variant the name of the variant can be passed here and the checkout session will be initiated for that product's variant. **Defaults to `undefined` if not provided.**                |
+| `requestCurrency?` | The display currency of the checkout session. Can be a token mint or a fiat currency such as `USD`, `EUR`, `JPY` etc. **Defaults to `USD`.**                                                              |
+| `backgroundColor?` | Background color of the pay button. **Defaults to `black` if not provided.**                                                                                                                              |
+| `textColor?`       | Text color of the pay button. **Defaults to `white` if not provided.**                                                                                                                                    |
+| `children?`        | If you want different content inside of the pay button, instead of the default Pay text. **Defaults to `Pay` if not provided.**                                                                           |
 | `className?`       | Lets you override the default className of the component which will give the ability to redefine the Buttons CSS, and overrides the default style. **Defaults to `coinable-pay-button` if not provided.** |
-| `style?`           | We also provide the style `CSSProperties` object for you to add inlined JSS. **Defaults to `{}` if not provided.**                                                                                    |
-| `ref?`             | Access to ref, if DOM access is needed.                                                     |
+| `style?`           | We also provide the style `CSSProperties` object for you to add inlined JSS. **Defaults to `{}` if not provided.**                                                                                        |
+| `ref?`             | Access to ref, if DOM access is needed.                                                                                                                                                                   |
