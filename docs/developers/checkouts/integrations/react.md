@@ -54,7 +54,8 @@ Basic usage is as follows:
 
 #### Variants
 
-Coinable products have this term called Variant which is an ability to checkout with a product variant for example, if we are selling a T-shirt and it has 5 different sizes, and 2 different colors we have 10 variations of the shirt `2 * 5 = 10`. Take a look at how Coinable structured your variants and their names, this is the `variant` name that you will use to populate the `variant` prop so if we have a **L / Black** variant of your t-shirt this is what we will use. As an example this would be my implementation of a varianted product.
+
+Products created with Coinable may have variants. In order to create a checkout with a variant, pass in the name of the variant which can be obtained from the Product page. For example, if we are selling a T-shirt with 5 different sizes, and 2 different colors, there are 10 variations of the shirt. If an available variant is a large black shirt, and the variant name displayed is **L / Black** on the product page, that is what is passed to the `variant` prop.
 
 ```js
 <PayButton
