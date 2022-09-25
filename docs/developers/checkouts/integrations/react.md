@@ -40,8 +40,20 @@ Basic usage is as follows
 
 1. Where `productId` we pass the product id of the product we setup in our Dashboard via the [Products](https://coinablepay.com/dashboard/products) tab.
 2. Then we have two callbacks that we need to implement
+
    - `onSuccess` returns the checkout session url for our user to be redirected too and pay for the product.
    - `onFailure` returns an error message on why did the checkout session initiation has failed.
+
+#### Variants
+
+Coinable products have this term called Variant which is an ability to checkout with a product variant for example, if we are selling a T-shirt and it has 5 different sizes, and 2 different colors we have 10 variations of the shirt `2 * 5 = 10`. Take a look at how Coinable structured your variants and their names, this is the `variant` name that you will use to populate the `variant` prop so if we have a **L / Black** variant of your t-shirt this is what we will use. As an example this would be my implementation of a varianted product.
+
+```js
+<PayButton
+  // Previous necessary props here
+  variant="L / Black"
+/>
+```
 
 ## Example
 
@@ -108,7 +120,10 @@ This approach will override all of the CSS that is provided out of the box. Its 
 :::
 
 ```js
-    <PayButton ... className="my-own-classname" />
+<PayButton
+  // Previous necessary props here
+  className="my-own-classname"
+/>
 ```
 
 ### Styled Components
@@ -130,11 +145,11 @@ const StyledPayButton = styled(PayButton)`
 If you don't want to touch the underlying CSS of the pay button component we allow to change the basic styling like color of your button, some implementors find it sufficient for their need, the available props are `backgroundColor` and `textColor`. See example below.
 
 ```js
-    <PayButton
-      ...
-      backgroundColor="#1FC055"
-      textColor="rgb(204, 252, 162)"
-    />
+<PayButton
+  // Previous necessary props here
+  backgroundColor="#1FC055"
+  textColor="rgb(204, 252, 162)"
+/>
 ```
 
 ## Props
@@ -146,8 +161,9 @@ Available props for the component are
 | `productId`        | The product id you get from the product created through Coinable.                                                                                                                                      |
 | `onSuccess`        | Callback which passes the url as the parameter which is used to redirect user to his generated checkout session.                                                                                       |
 | `onFailure`        | Callback which passes the error message which should hint to while the checkout session generation failed.                                                                                             |
+| `variant?`         | If product utilizes variant the name of the variant can be passed here and the checkout session will be initiated for that product's variant. **Defaults to `undefined` if not provided.**             |
 | `quantity?`        | How much of the product is the user about to buy. **Defaults to `1` if not provided.**                                                                                                                 |
-| `requestCurrency?` | In which currency will the checkout session will be shown, can be token mint or a fiat currency such as `USD`, `EUR`, `JPY` etc, supporting all currencies. **Defaults to `USD`**                      |
+| `requestCurrency?` | In which currency will the checkout session will be shown, can be token mint or a fiat currency such as `USD`, `EUR`, `JPY` etc, supporting all currencies. **Defaults to `USD` if not provided.**     |
 | `backgroundColor?` | Background color of the pay button. **Defaults to `black` if not provided.**                                                                                                                           |
 | `textColor?`       | Text color of the pay button. **Defaults to `white` if not provided.**                                                                                                                                 |
 | `children?`        | If you want a different content inside of the pay button, instead of the default Pay text. **Defaults to `Pay` if not provided.**                                                                      |
