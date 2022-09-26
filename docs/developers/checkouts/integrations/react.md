@@ -8,6 +8,15 @@ import PayButton from '@coinable/pay-button';
 
 The React based component integration will let you integrate a pay button anywhere within your application. The ability to apply style will keep the pay button consistent with your websites branding. See [Customization](/developers/checkouts/integrations/react#customization) section for details.
 
+<div style={{textAlign: 'center', paddingTop: '20px'}}>
+
+<video width="100%" height="auto" controls>
+
+<source src="/videos/guides/react-example.mp4" type="video/mp4" />
+</video>
+
+</div>
+
 ## Live example
 
 <PayButton productId="EKbTyXz5cPCspocqbRvFrE" onSuccess={(url) => {window.location.href = url;}} onFailure={(msg) => console.error(msg)} />
@@ -43,9 +52,7 @@ Basic usage is as follows:
    - `onSuccess` returns the checkout session url for the customer to be redirected to and pay for the product.
    - `onFailure` returns an error message on why the checkout session initiation failed.
 
-
 #### Variants
-
 
 Products created with Coinable may have variants. In order to create a checkout with a variant, pass in the name of the variant which can be obtained from the Product page. For example, if we are selling a T-shirt with 5 different sizes, and 2 different colors, there are 10 variations of the shirt. If an available variant is a large black shirt, and the variant name displayed is **L / Black** on the product page, that is what is passed to the `variant` prop.
 
@@ -96,17 +103,6 @@ function App() {
 
 export default App;
 ```
-
-The example integration looks like this, **just in 33 lines of code**:
-
-<div style={{textAlign: 'center', paddingTop: '20px'}}>
-
-<video width="100%" height="auto" controls>
-
-<source src="/videos/guides/react-example.mp4" type="video/mp4" />
-</video>
-
-</div>
 
 ## Customization
 
