@@ -48,9 +48,9 @@ https://api.coinablepay.com/v1/api/checkouts?api_key=<YOUR_API_KEY>
 
 `request_currency` - You can specify the checkout currency both in a fiat representation, or a token representation using an appropriate mint.
 
-`products` - An array of `Product` objects where the `Product`, this array recieves two possible structures
+`products` - An array of `Product` objects. The products array allows two possible ways to define a product object.
 
-1. `id` of the product and desired `quantity`
+1. Use your products created in the Products page from the dashboard by adding`id`, the product ID, and `quantity`, the quantity of the product.
 
 ```json
 {
@@ -59,7 +59,7 @@ https://api.coinablepay.com/v1/api/checkouts?api_key=<YOUR_API_KEY>
 }
 ```
 
-2. An inline product which can be created on demand with the following fields
+2. An inline product which can be created on demand with the following fields:
    - `price` - The price of the product.
    - `quantity` - The quantity ordered.
    - `title` - The name of the product.
@@ -67,17 +67,15 @@ https://api.coinablepay.com/v1/api/checkouts?api_key=<YOUR_API_KEY>
    - `image_url` - An optional product image. A placeholder will be used if no URL is provided.
    - `currency` - An optional currency mint. If not provided, checkout currency will be used instead.
 
-Its also possible to use your `Products` created in the Products tab from the dashboard by adding - `id` - the product id. - `quantity` - the quantity of the product.
-
 `shipping_options` - optional. An array of `ShippingOption`, which defines the shipping options available to the customer. If left undefined, shipping is not needed for the respective product, e.g. a game key.
 
 - `price` - The cost of shipping the product.
 - `display_name` - The name of the shipping method. e.g. "Free shipping"
 - `delivery_estimate` - An object `DeliveryEstimate` responsible for defining the min and max values of the shipping.
-- `min_unit` - the minimum unit of time, defaults to `business_day` (Not editable at the moment).
-- `max_unit` - the maximum unit of time, defaults to `business_day` (Not editable at the moment).
-- `min_value` - the numerical representation of the minimum unit until shipping.
-- `max_value` - the numerical representation of the maximum unit until shipping.
+- `min_unit` - The minimum unit of time, defaults to `business_day` (Not editable at the moment).
+- `max_unit` - The maximum unit of time, defaults to `business_day` (Not editable at the moment).
+- `min_value` - The numerical representation of the minimum unit until shipping.
+- `max_value` - The numerical representation of the maximum unit until shipping.
 - `type` - optional. Type of payment, defaults to `fixed_amount`(Not editable at the moment).
 
 `custom_fields` - optional - An array of `CustomField`, which defines a custom field on your checkout form, which can be used for custom data that may be required for your business.
@@ -88,7 +86,7 @@ Its also possible to use your `Products` created in the Products tab from the da
 
 ### Creating a checkout session
 
-Lets initiate a new checkout session with what we've learned so far, we will be using both the product hosted through Coinable, and inline another product just to showcase the two possibilities
+Lets initiate a new checkout session with what we've learned so far. We will pass the two formats of products accepted by the products array. First, will be using the product created through Coinable, and second will inline a product created externally.
 
 ```json title="Checkout session creation"
 
@@ -106,7 +104,7 @@ curl --location --request POST 'https://api.coinablepay.com/v1/api/checkouts?api
       {
           "price": 15,
           "quantity": 3,
-          "title": "Whatever"
+          "title": "Title of product"
       }
   ],
   "shipping_options": [
