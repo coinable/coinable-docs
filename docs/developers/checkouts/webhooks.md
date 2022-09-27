@@ -25,7 +25,7 @@ The following events are emitted:
 
 ### Discord
 
-Currently we support only Discord based webhooks, and can be set up follow the below steps:
+If you want to get notified on every new successful payment, we provide a Discord integration that can be setup in less then 5 minutes.
 
 1. Create a text channel where the Bot will direct payment notifications.
 2. Click on the cog next to your channel name (Edit Channel).
@@ -42,4 +42,4 @@ You are all set to go. The Bot will now update the created channel with payments
 [New project]: New successful payment for 0.86 SOL for simple test product.
 ```
 
-More integrations coming soon.
+**More integrations coming soon.**
