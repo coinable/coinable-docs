@@ -25,7 +25,7 @@ The following events are emitted:
 
 ### Discord
 
-If you want to get notified each time your project has a new successful payment we provide a simple yet powerful Discord integration that can be setup in less then 10 minutes.
+If you want to get notified on every new successful payment, we provide a Discord integration that can be setup in less then 5 minutes.
 
 1. Create a text channel where the Bot will direct payment notifications.
 2. Click on the cog next to your channel name (Edit Channel).
