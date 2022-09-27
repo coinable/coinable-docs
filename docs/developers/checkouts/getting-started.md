@@ -84,6 +84,20 @@ https://api.coinablepay.com/v1/api/checkouts?api_key=<YOUR_API_KEY>
 - `title` - the title of your field which will be used as a title in the checkout form.
 - `key` - the key under which the value of this field will be saved. The `key` must be unique, otherwise values will be overidden. The `key` also represents the field under the Order details, which takes the form of `key_name` -> `Key name`.
 
+`metadata` - optional. We provide developers with a custom metadata field which can be populate `key: value` data, for further usage, consumption on the server side. Here is an example of possible metadata that can be passed and recieved later through the webhook via event.
+
+Example metadata field:
+
+```json
+{
+  ...
+  "metadata": {
+    "user_id": "abcdefg",
+    "another_field": "abcdefg"
+  }
+}
+```
+
 ### Creating a checkout session
 
 Lets initiate a new checkout session with what we've learned so far. We will pass the two formats of products accepted by the products array. First, will be using the product created through Coinable, and second will inline a product created externally.
