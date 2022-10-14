@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# No-code Online Stores
+# No-code Online Web3 Store
 
 Creators and merchants can display their services, digital, and physical products at a pre-built hosted online store, allowing customers to browse products and services offered and pay with SOL, USDC, USDT, and other solana tokens through a familiar mobile friendly Web3 eCommerce experience.
 
@@ -16,7 +16,7 @@ The walk through will help you launch an online Store with your goods and servic
 
 :::
 
-## Open your online store
+## Open your online Web3 store
 
 Go to the **Storefront** page.
 
@@ -42,11 +42,11 @@ Store branding can be customized in just a few clicks. The branding will be refl
 
 Go to **Settings** and scroll down to the **Brand** section.
 
-Customize branding and click `Update Settings`. **That's it.**
+Customize branding, connect your wallet, and click `Update Settings`. **That's it.**
 
 <div style={{textAlign: 'center', padding: '20px'}}>
 
-![One Click Start](/img/guides/store-branding.png)
+![Branding](/img/guides/store-branding.png)
 
 </div>
 
