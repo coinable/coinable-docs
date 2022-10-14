@@ -12,7 +12,7 @@ Don't let inconsistent branding or an unfriendly mobile experience negatively im
 
 :::note
 
-At the moment, only products priced in `USD`, i.e. where `Pricing currency/token` in the product create/edit field is set to `USD` will be displayed in the pre-built hosted online store. More options available in 3Q/2022.
+The walk through will help you launch an online Store with your goods and services. In order start accepting payments complete the steps outlined at [Start Here](/guides/start-here).
 
 :::
 
@@ -105,6 +105,8 @@ Make sure to toggle **Show on Storefront** to display your product in your store
 ### 3. Set pricing and inventory
 
 Set the pricing and amount available. The ability to add options and create variants of products, e.g Large Blue T-Shirt, is available for physical products. You can set the pricing for inventory independently for each variant.
+
+**Pricing currency** will determine what your customers will see on your online store. If priced in `USD`, they will see products priced in `USD`, while payments will be made in the tokens you have approved through the **Settings** page.
 
 :::warning
 
