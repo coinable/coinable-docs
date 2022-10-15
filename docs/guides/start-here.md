@@ -32,7 +32,7 @@ Any actions that impact the balances of the **Vault** will require the wallet sp
 
 </div>
 
-## Whitelist tokens
+## Decide the tokens to accept as payment
 
 You will need to decide which tokens that you want accept as payment. This can be accomplished by whitelisting tokens, and will restrict the type of token that customers can send to you allowing for increased control.
 
