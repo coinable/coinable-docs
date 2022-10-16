@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# No-code Online Web3 Store
+# Open a No-code online Web3 store
 
 Creators and merchants can display their services, digital, and physical products at a pre-built hosted online store, allowing customers to browse products and services offered and pay with SOL, USDC, USDT, and other solana tokens through a familiar mobile friendly Web3 eCommerce experience.
 
@@ -16,7 +16,7 @@ The walk through will help you launch an online Store with your goods and servic
 
 :::
 
-## Open your online Web3 store
+## Create your online Web3 store
 
 Go to the **Storefront** page.
 
@@ -101,6 +101,8 @@ Make sure to toggle **Show on Storefront** to display your product in your store
 ![One Click Start](/img/guides/store-products-media.png)
 
 </div>
+
+Learn how to **gate a product** by a collection [here](../guides/products#gate-products-by-nft-collections).
 
 ### 3. Set pricing and inventory
 
