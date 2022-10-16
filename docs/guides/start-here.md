@@ -2,7 +2,7 @@
 sidebar_position: 0
 ---
 
-# Start Here
+# Getting started
 
 A user will be able to create many **Projects**, where a project can represent a restaurant, e-shop, store, or a freelance business.
 
@@ -57,6 +57,10 @@ Customers will be able to pay in any token that have been whitelisted by you. Fo
 
 To whitelist tokens for a given project, go to **Settings** and connect your **Signer** wallet. Make sure to connect the **Signer** wallet that you specified in the previous step. Click on the tokens that you would like to accept as payment and click the `Update whitelist` button, and hit approve to reflect the changes on the blockchain.
 
+:::note
+Whitelisting tokens will require a small amount of SOL for rent per token. The rent is used to add information on chain to indicate that you are accepting the tokens as payments for a given project. **The rent will be returned, when you remove the token.**
+
+:::
 
 <div style={{textAlign: 'center', padding: '20px'}}>
 
