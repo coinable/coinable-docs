@@ -5,23 +5,22 @@ slug: /
 
 # Introduction
 
-**Coinable** is a non-custodial Web3 eCommerce and payments platform powered by the Solana blockchain. We are focused on delivering the powers of Web3 eCommerce to everyone. All a person needs is a web connection, wallet, and Coinable's suite of Web3 tools to deliver next-generation digital eCommerce experiences from the palm of their hands.
+**Coinable** is a non-custodial Web3 eCommerce platform powered by the Solana blockchain. We focus on bringing the benefits of Web3 eCommerce to everyone. With only a crypto wallet and internet connection, you’ll be ready to use Coinable’s easy to use Web3 eCommerce platform.
 
-Coinable offers the ability to integrate a customizable pre-built Checkout into an existing website, or launch a no-code online Web3 Store to accept solana payments for goods and services with a few clicks.
+With a few clicks, users can launch a no-code onlne Web3 store that accepts Solana payments.
 
-Coinable provides an Application Programming Interface (API) that can be used to build decentralized Web3 payment experiences, which is easy to follow and integrate.
+Coinable also lets users integrate a custom checkout into an existing site. Our API is simple to use and flexible enough to meet your decentralized payment needs.
 
-Merchants, creators, artists, and innovators can now **transform businesses to be Web3 compatible and competitive** in the coming digital commerce revolution.
+Merchants, creators, artists, and innovators can now transform their business to be Web3 compatible. With this competitive edge, they’ll be ready for the coming age of digital commerce.
 
-This documentation is for anyone interested in accepting native SOL or tokens such as USDC, USDT, DUST, and any other tokens in the Solana ecosystem.
-
+This documentation is for anyone wishing to accept SOL or native tokens like USDC, wSOL, DUST, etc. Top tokens from Solana’s ecosystem can be found here.
+ 
 **Ready to get started?** [Start here](/guides/start-here)!
-
-Help us improve our documentation by contributing to our [documentation](https://github.com/coinable/coinable-docs).
 
 > **NOTE**
 >
-> We are iterating fast and the platform and respective services are heavily under construction as we continue to work on our beta version.
-> Feedback in relation to feature requests and bug reports are greatly appreciated.
+> We are iterating fast. The platform and services are under heavy construction as our beta release gets refined. Feedback is greatly appreciated in regards to feature requests and/or bug reports.
 >
-> **Want to learn more?** Join our [Discord community](https://discord.gg/RgU669RNRk), and feel free to ask questions and share your thoughts.
+> **Want to learn more?** Join our [Discord community](https://discord.gg/RgU669RNRk). Feel free to ask questions and share your thoughts.
+
+Help improve our documentation by contributing to our [github](https://github.com/coinable/coinable-docs)!
