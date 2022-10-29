@@ -7,13 +7,13 @@ slug: /
 
 **Coinable** is a non-custodial Web3 eCommerce platform powered by the Solana blockchain. We focus on bringing the benefits of Web3 eCommerce to everyone. With only a crypto wallet and internet connection, you’ll be ready to use Coinable’s easy to use Web3 eCommerce platform.
 
-With a few clicks, users can launch a no-code onlne Web3 store that accepts Solana payments.
+With a few clicks, users can launch a no-code online Web3 store that accepts Solana payments.
 
 Coinable also lets users integrate a custom checkout into an existing site. Our API is simple to use and flexible enough to meet your decentralized payment needs.
 
 Merchants, creators, artists, and innovators can now transform their business to be Web3 compatible. With this competitive edge, they’ll be ready for the coming age of digital commerce.
 
-This documentation is for anyone wishing to accept SOL or native tokens like USDC, wSOL, DUST, etc. Top tokens from Solana’s ecosystem can be found here.
+This documentation is for anyone wishing to accept SOL or native tokens like USDC, USDT, DUST, FORGE, etc. 
  
 **Ready to get started?** [Start here](/guides/start-here)!
 
